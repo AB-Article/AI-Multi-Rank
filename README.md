@@ -1,4 +1,11 @@
-# A differential theory of quality–resource trade-offs — reproducibility archive
+# A differential theory of quality–resource trade-offs
+
+**What a Pareto frontier decides before a price is declared**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24219611.svg)](https://doi.org/10.5281/zenodo.24219611)
+[![License: Apache 2.0](https://img.shields.io/badge/code-Apache%202.0-blue.svg)](LICENSE)
+[![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-blue.svg)](LICENSE-DATA)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 
 Data, analysis code and results for:
 
@@ -10,8 +17,8 @@ is produced by the code in this archive from the data in this archive. There are
 no hidden steps, no manual edits to any number, and no network access at
 analysis time.
 
-**Archive DOI:** `10.5281/zenodo.24219611` — replace with the DOI Zenodo mints
-for this release before quoting it.
+**Archive DOI:** [`10.5281/zenodo.24219611`](https://doi.org/10.5281/zenodo.24219611).
+Please cite the archive alongside the article.
 
 ---
 
@@ -611,17 +618,13 @@ Zenodo mints a DOI from a GitHub *release*, not from a push, and it reads
    archive, `isSupplementTo` the predecessor preprint, and `isSupplementedBy`
    the maintained `nn-rank` implementation. Check them on the Zenodo record
    rather than assuming.
-4. Put the **version** DOI in four places and keep them consistent:
-
-   | file | placeholder to replace |
-   |---|---|
-   | `README.md`, "Archive DOI" | `10.5281/zenodo.24219611` |
-   | `CITATION.cff`, `identifiers` | `10.5281/zenodo.24219611` |
-   | `../refs.bib`, `@string{ignatovZenodoID}` | `XXXXXXX` (one edit feeds the DOI and the URL) |
-   | the article's data-availability statement | `[TO BE COMPLETED BEFORE SUBMISSION]` in `../cover_letter.txt` |
-
-   `grep -rn "zenodo.0000000\|XXXXXXX\|TO BE COMPLETED"` from the source
-   directory finds all four.
+4. Keep the DOI consistent. In this repository it is set in three places, all
+   already carrying `10.5281/zenodo.24219611`: the badge and the "Archive DOI" line in
+   `README.md`, and `identifiers` in `CITATION.cff`. `grep -rn "zenodo\."
+   README.md CITATION.cff` shows all three. Two further places live with the
+   manuscript sources rather than here --- the `@string{ignatovZenodoID}` in
+   `refs.bib` and the data-availability statement in the cover letter --- and are
+   outside this repository's scope.
 5. Re-run `./run_all.sh guards` after editing those files, since the guards
    read them.
 

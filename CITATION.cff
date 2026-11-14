@@ -40,9 +40,7 @@ keywords:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.24219611
-    description: >-
-      Archived snapshot of this release. Replace with the DOI Zenodo mints for
-      the release before quoting it in the article.
+    description: Archived snapshot of this release.
 references:
   - type: article
     title: >-
