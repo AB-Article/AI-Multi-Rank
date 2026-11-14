@@ -10,7 +10,7 @@ is produced by the code in this archive from the data in this archive. There are
 no hidden steps, no manual edits to any number, and no network access at
 analysis time.
 
-**Archive DOI:** `10.5281/zenodo.0000000` — replace with the DOI Zenodo mints
+**Archive DOI:** `10.5281/zenodo.24219611` — replace with the DOI Zenodo mints
 for this release before quoting it.
 
 ---
@@ -615,8 +615,8 @@ Zenodo mints a DOI from a GitHub *release*, not from a push, and it reads
 
    | file | placeholder to replace |
    |---|---|
-   | `README.md`, "Archive DOI" | `10.5281/zenodo.0000000` |
-   | `CITATION.cff`, `identifiers` | `10.5281/zenodo.0000000` |
+   | `README.md`, "Archive DOI" | `10.5281/zenodo.24219611` |
+   | `CITATION.cff`, `identifiers` | `10.5281/zenodo.24219611` |
    | `../refs.bib`, `@string{ignatovZenodoID}` | `XXXXXXX` (one edit feeds the DOI and the URL) |
    | the article's data-availability statement | `[TO BE COMPLETED BEFORE SUBMISSION]` in `../cover_letter.txt` |
 

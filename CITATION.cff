@@ -39,7 +39,7 @@ keywords:
   - reproducibility
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.0000000
+    value: 10.5281/zenodo.24219611
     description: >-
       Archived snapshot of this release. Replace with the DOI Zenodo mints for
       the release before quoting it in the article.
