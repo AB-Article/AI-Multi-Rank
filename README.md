@@ -75,7 +75,12 @@ matplotlib 3.11.2 / mpmath 1.4.1 / sympy 1.14.0.
 | …expected under a design-matched null, which **withdraws that count** | 100.3 of 117 | `167_ceiling_null.py` |
 | …calibrated rejections at the 5 % level | 0 of 111 (median triple), 5 of 88 (widest triple) | `167_ceiling_null.py` |
 | …power against a floor at twice its admissible value | 0.010 and 0.096 | `167_ceiling_null.py` |
-| Held-out prediction on 2025 withheld models | R² = 0.9897 on log-error, 2.60 % median relative error | `68_prediction_assessment.py`, pooled by `99_cure_chart.py` |
+| Held-out prediction: 2025 **leave-one-out events**, not 2025 withheld models | 2259 measurements − 2×117 endpoints, each refitted on a median 91 % of its own frontier | `169_prediction_clustered.py` |
+| …pooled agreement over those events | R² = 0.9897 on log-error, 2.60 % median relative error | `68_prediction_assessment.py`, pooled by `99_cure_chart.py` |
+| …per-frontier error, intervals clustered on the 117 frontiers | law 0.037 interior, 0.074 forward, 0.159 backward (nats) | `169_prediction_clustered.py` |
+| …law beats the floorless power law in all three regimes | 73.5 %, 73.5 %, 61.5 % of frontiers | `169_prediction_clustered.py` |
+| …but loses the interior to log-linear interpolation | 74.4 % of frontiers, paired median 0.0128 nats | `169_prediction_clustered.py` |
+| …and wins the backward extrapolation against every baseline | 67.5 % of frontiers, paired median 0.0260 nats | `169_prediction_clustered.py` |
 | Cure chart ties the standard form out of sample | 2.57 % on 2013 points against 2.60 % on 2025 | `99_cure_chart.py` |
 | Arc–depth identity: √N<sub>eff</sub> beats N<sub>eff</sub> and S | 76 of 90 frontiers, median R² = 0.9992 | `104_tower_and_arc.py` |
 | Harmonic rule against the resource-aware choice | 90.94 % on 20 206 Pareto pairs, against 77.41 % | `45_accuracy_only.py` |
@@ -257,14 +262,16 @@ divisibility nulls, and the thirteen-axis audit of the reformulation.
 the certified set and its measured coverage, the design rule, the sequential
 minimax design and the input-size axis.
 
-**This revision** (`158`–`168`). The zero-floor null for the fitted floor share,
+**Floor, rule and null measurements** (`158`–`169`). The zero-floor null for the fitted floor share,
 the exponent decomposition, the arc deficit read at its crossover, the plug-in
 rung's node-spacing bias, the published fixed-exponent rule, the plug-in regret,
 the three-point-floor re-score of the rule table, Friedman and Nemenyi, **the
 admissible-ceiling null that retires the 89-of-117 count** (`167`), and **the
-loss-free measurement of how far apart the rules in use are** (`168`).
+loss-free measurement of how far apart the rules in use are** (`168`), and the
+frontier-clustered reading of the held-out prediction with its full baseline
+grid (`169`).
 
-**Guards** (five, unnumbered). `run_all.sh guards` runs them; see below.
+**Guards** (six, unnumbered). `run_all.sh guards` runs them; see below.
 
 The eight stages `fast` mode skips are `30`, `63`, `82`, `116`, `124`, `127`,
 `130` and `167` — the ones the provenance map documents as slow. They dominate

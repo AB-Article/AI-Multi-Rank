@@ -23,9 +23,9 @@ authors:
     given-names: Dmitry
     affiliation: >-
       Computer Vision Lab, CAIDAS & IFI, University of Wuerzburg, Germany
-    email: dmitry.ignatov@uni-wuerzburg.de
-version: 2.0.0
-date-released: '2026-11-14'
+    email: dmytro.ignatov@uni-wuerzburg.de
+version: 2.1.0
+date-released: '2026-11-15'
 license: Apache-2.0
 license-url: https://opensource.org/licenses/Apache-2.0
 repository-code: https://github.com/AB-Article/differential-theory

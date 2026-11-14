@@ -236,6 +236,7 @@ STAGE3=(
     166_rules_significance.py
     167_ceiling_null.py
     168_rule_spread.py
+    169_prediction_clustered.py
     20_nested_verification.py
     21_nested_reference_lm.py
 )

@@ -70,12 +70,30 @@ print("\nPROVENANCE CLAIMS (%d):"%len(hits))
 def _num(path):
     n = os.path.basename(path).split('_')[0]
     return n if n.isdigit() else None
-hfrac={n for n in (_num(p) for p in glob.glob(Z+'scripts/*.py') if 'HFRAC' in io.open(p,encoding='utf-8',errors='replace').read()) if n}
-mad  ={n for n in (_num(p) for p in glob.glob(Z+'scripts/*.py') if '0.005, 0.25' in io.open(p,encoding='utf-8',errors='replace').read() or '0.005,0.25' in io.open(p,encoding='utf-8',errors='replace').read()) if n}
+# Four shared conventions are checkable, and a citation must resolve to one of
+# them: the HFRAC/NGRID bandwidth grid, the clipped MAD, the 0.05-nat decision
+# band of script 11, and the local-quadratic estimator of script 38.  With only
+# the first two, two accurate citations were reported as offenders --
+# 45_accuracy_only.py cites the band, _calib.py cites the estimator.
+def _declaring(test):
+    return {n for n in (_num(q) for q in glob.glob(Z+'scripts/*.py')
+                        if test(io.open(q,encoding='utf-8',errors='replace').read())) if n}
+hfrac=_declaring(lambda s: 'HFRAC' in s)
+mad  =_declaring(lambda s: '0.005, 0.25' in s or '0.005,0.25' in s)
+band =_declaring(lambda s: 'BAND = 0.05' in s or 'BAND=0.05' in s)
+estim=_declaring(lambda s: '0.5 * ((x - xc) / h) ** 2' in s
+                        or '0.5 * (x - xc) ** 2' in s)
 print("  scripts declaring HFRAC/NGRID: %s"%' '.join(sorted(hfrac,key=int)))
 print("  scripts implementing the clipped MAD: %s"%' '.join(sorted(mad,key=int)))
+print("  scripts declaring the 0.05-nat band: %s"%' '.join(sorted(band,key=int)))
+print("  scripts implementing the local quadratic: %s"%' '.join(sorted(estim,key=int)))
+known=hfrac|mad|band|estim
+unresolved=False
 for f,i,t in hits:
     nums=re.findall(r'\d+',t)
-    bad=[n for n in nums if n not in hfrac and n not in mad and len(n)<=3]
-    flag='  <-- cites a script that declares neither' if bad else ''
+    bad=[n for n in nums if n not in known and len(n)<=3]
+    unresolved=unresolved or bool(bad)
+    flag='  <-- cites a script that declares none of the four' if bad else ''
     print("  %-28s:%-5d %s%s"%(f,i,t[:72],flag))
+print("  PROVENANCE: see the flagged lines above." if unresolved
+      else "  PROVENANCE CLEAN: every citation resolves.")
