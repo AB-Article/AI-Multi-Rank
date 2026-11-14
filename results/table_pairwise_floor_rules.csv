@@ -1,0 +1,5 @@
+rule,accuracy,mean_cost,n_pairs
+"harmonic test, pairwise covariance floor",0.745387,0.052205,271
+"harmonic test, fitted floor",0.892989,0.009055,271
+always the cheaper,0.778598,0.012667,271
+median |cov_floor/fitted_floor - 1|,,0.179292,271

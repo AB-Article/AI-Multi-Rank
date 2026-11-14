@@ -1,0 +1,10 @@
+corpus,frontiers,median_span,n_chain_link1_nonneg,n_chain_link2_nonneg,n_D1_nonneg,n_D2_nonneg,n_old_rung3_ok,median_D1,median_D2
+hpo,25,2.26,1,13,1,0,14,-1.0742,-0.8063
+materials,2,6.1,0,0,0,0,0,-0.215,-0.5302
+medicine,6,4.16,0,1,0,0,3,-1.4325,-1.9905
+nas,10,2.64,1,8,1,0,8,-1.1581,-2.7417
+tabular,37,5.76,1,19,1,1,8,-1.0269,-0.7318
+vision,9,6.85,3,4,3,0,3,-0.9322,-0.8769
+vision-shift,7,6.67,1,4,1,0,2,-0.3478,-0.8944
+vision-size,6,3.99,2,2,2,1,1,-1.4801,-0.3232
+ALL,102,5.12,9,51,9,2,39,-1.0699,-0.8536

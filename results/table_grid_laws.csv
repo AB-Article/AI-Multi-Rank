@@ -1,0 +1,85 @@
+block,check,passed,detail
+A,two-atom dS*=ln(1+1/t)  t=1,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=1,1,
+B,two-atom lambda*=alpha/(1+t)  t=1,1,0.65
+B,two-atom sqrt(kappa/t)=lambda*  t=1,1,
+A,two-atom dS*=ln(1+1/t)  t=1,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=1,1,
+B,two-atom lambda*=alpha/(1+t)  t=1,1,0.2
+B,two-atom sqrt(kappa/t)=lambda*  t=1,1,
+A,two-atom dS*=ln(1+1/t)  t=2,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=2,1,
+B,two-atom lambda*=alpha/(1+t)  t=2,1,0.43333333
+B,two-atom sqrt(kappa/t)=lambda*  t=2,1,
+A,two-atom dS*=ln(1+1/t)  t=2,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=2,1,
+B,two-atom lambda*=alpha/(1+t)  t=2,1,0.13333333
+B,two-atom sqrt(kappa/t)=lambda*  t=2,1,
+A,two-atom dS*=ln(1+1/t)  t=3,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=3,1,
+B,two-atom lambda*=alpha/(1+t)  t=3,1,0.325
+B,two-atom sqrt(kappa/t)=lambda*  t=3,1,
+A,two-atom dS*=ln(1+1/t)  t=3,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=3,1,
+B,two-atom lambda*=alpha/(1+t)  t=3,1,0.1
+B,two-atom sqrt(kappa/t)=lambda*  t=3,1,
+A,two-atom dS*=ln(1+1/t)  t=10,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=10,1,
+B,two-atom lambda*=alpha/(1+t)  t=10,1,0.11818182
+B,two-atom sqrt(kappa/t)=lambda*  t=10,1,
+A,two-atom dS*=ln(1+1/t)  t=10,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=10,1,
+B,two-atom lambda*=alpha/(1+t)  t=10,1,0.036363636
+B,two-atom sqrt(kappa/t)=lambda*  t=10,1,
+A,two-atom dS*=ln(1+1/t)  t=100,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=100,1,
+B,two-atom lambda*=alpha/(1+t)  t=100,1,0.012871287
+B,two-atom sqrt(kappa/t)=lambda*  t=100,1,
+A,two-atom dS*=ln(1+1/t)  t=100,1,
+A,two-atom eps*=eps_inf(1+t)/t  t=100,1,
+B,two-atom lambda*=alpha/(1+t)  t=100,1,0.003960396
+B,two-atom sqrt(kappa/t)=lambda*  t=100,1,
+A,cure dS*=1/t  t=1,1,
+A,cure dS*=1/t  t=1,1,
+A,cure dS*=1/t  t=2,1,
+A,cure dS*=1/t  t=2,1,
+A,cure dS*=1/t  t=5,1,
+A,cure dS*=1/t  t=5,1,
+A,cure dS*=1/t  t=20,1,
+A,cure dS*=1/t  t=20,1,
+A,band g(1) = 1 - ln 2 = 0.30685,1,0.30685282
+A,band decreasing in the grain,1,
+A,band at t=1 exceeds the count-axis bracket (0.20 / 0.094 nats),1,
+A,band at t=2 already below it,1,g(2)=0.0945349
+A,axiom wall N_eff <= e^{dS}-1 (so dS* >= ln(1+1/t)),1,0 violations / 48000 points
+A,dS* >= ln(1+1/t) at every located operating point,1,0 / 1341 operating points
+A,t=1 operating point IS the elbow,1,
+A,c_3 = 0 there (the divisibility boundary),1,c3=0.0
+C,"N=1/sqrt(t1t2) is minimax on [1.0,4.0]",1,
+C,"value = ln cosh((1/4)ln(t2/t1)) on [1.0,4.0]",1,0.058891518 nats
+C,"N=1/sqrt(t1t2) is minimax on [1.0,11.0]",1,
+C,"value = ln cosh((1/4)ln(t2/t1)) on [1.0,11.0]",1,0.1698528 nats
+C,"N=1/sqrt(t1t2) is minimax on [2.0,100.0]",1,
+C,"value = ln cosh((1/4)ln(t2/t1)) on [2.0,100.0]",1,0.41713286 nats
+C,grain ignorance is unbounded in regret,1,R(1e9)=9.66849
+C,a 10x grain uncertainty costs 0.157 nats,1,
+D,AXIOM: sampled error and -Delta(error) are Hausdorff moment sequences,1,0/240 minors negative
+D,HYPOTHESIS: divisible charts -- every minor of the sampled depth >= 0,1,0/54
+D,the cure chart satisfies the discrete wall with EQUALITY at every grid,1,max|defect|=7.35e-40
+D,h->0: (d0d2-d1^2)/h^2 -> kappa*DeltaS - s^2  (i.e. the wall),1,
+D,5 accuracies refute strictly more indivisible frontiers than 3,1,"3-point 232/300, 5-point 292/300"
+E,eps_A is an upper bound on the floor of every CM frontier,1,0/54
+E,eps_W is an upper bound on the floor of every DIVISIBLE frontier,1,0/54 (so a floor above eps_W refutes)
+E,eps_W is EXACT on the cure chart,1,
+E,eps_A is EXACT on the two-atom chart,1,
+E,"refutation margin on indivisible truths (median, in nats of floor)",1,"median 1.468 nats, range [4.93e-5, 27.66] -- window-dependent, as Prop. elbow requires"
+E,required floor precision falls monotonically through the elbow,1,"nats needed at e-folds from the elbow: -3:41.4, -2:9.81, -1:1.94, +0:0.286, +1:0.0304, +2:0.0026, +4:1.51e-5"
+E,left of the elbow the count-axis bracket (0.094-0.20 nats) suffices,1,1 e-fold left needs 1.94 nats of floor; 1 e-fold right needs 0.030 -- the test lives left of the elbow
+F,Hankel rank of Delta(eps) counts the reducible atoms (2 atoms),1,
+F,Hankel rank of Delta(eps) counts the reducible atoms (3 atoms),1,
+F,Hankel rank of Delta(eps) counts the reducible atoms (4 atoms),1,
+F,a divisible chart has NO finite rank (every minor nonzero),1,"|minors| 0.368, 0.00297, 9.62e-7, 1.23e-11, 4.51e-18"
+F,"bundling k=2 takes rank 1 -> rank 2 (arithmetic, not information)",1,
+F,integer error gauges are theorems: eps^k is CM for every CM eps,1,so the hypothesis has content only at non-integer grain
+G,int R dphi = pi ln 2 (one bit per radian),1,2.17758609030360213
+G,"int dphi = pi (the total arc, Prop. gudermann)",1,

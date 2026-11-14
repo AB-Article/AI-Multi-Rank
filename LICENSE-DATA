@@ -1,0 +1,33 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 ABrain-One
+
+The derived data, result tables and figures in this archive are licensed under
+the Creative Commons Attribution 4.0 International License. You are free to
+share and adapt the material for any purpose, including commercially, provided
+you give appropriate credit, link to the license, and indicate if changes were
+made.
+
+  Licence text:  https://creativecommons.org/licenses/by/4.0/legalcode
+  Summary:       https://creativecommons.org/licenses/by/4.0/
+
+Attribute as:
+
+  Dmitry Ignatov. A Differential Theory of Quality-Resource Trade-offs for AI
+  Model Selection: The Multiresource Frontier and Its Minimax Price. Data,
+  code and results. Zenodo, 2026. doi:10.5281/zenodo.<RESERVED-ID>
+
+SCOPE AND UPSTREAM RIGHTS
+
+This licence covers only the material created by the author: the derived
+frontiers, the fitted quantities, the result tables under `data/` and
+`results/`, and the figures.
+
+It does NOT relicense the upstream benchmark measurements from which those
+derivations were made. Each upstream source keeps its own terms, which
+continue to apply to any redistribution of its records; the sources and their
+licences are listed under "Data sources" in README.md. Extracts are included
+here for verification of the published numbers.
+
+Source code in this archive is licensed separately under the Apache-2.0 License; see
+LICENSE.

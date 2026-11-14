@@ -1,0 +1,13 @@
+quantity,value
+T1  distinct L from quadrature across five gauges (should be 1),1.0
+T1  distinct raw-weight values across the same five gauges,5.0
+T1  distinct crossover values across the same five gauges,1.0
+"T1  max relative error, raw-weight form",0.2974455572
+"T1  max relative error, crossover form",0.0016814968
+"T2  max relative error, raw-weight form",0.4263468892
+"T2  max relative error, crossover form",0.0004779451
+T3  relative error of the closed form at A = 2 (equal weights),0.2149808497
+T3  relative error of the closed form at A = 1e6 (equal weights),3.1435e-06
+"T4  max relative error, crossover form, separated spectra",4.29906e-05
+"T5  max relative error, raw-weight form, separated weights",4.17e-08
+"overall max relative error, crossover form, separated cases only",0.0016814968

@@ -1,0 +1,5 @@
+quantity,n,spearman,p_value,median_derived,median_fitted
+beta: line slope vs fitted chart,32,0.281,0.11953959536455747,-1.1947,0.2285
+x_0: line zero vs fitted chart,77,0.43,9.59942738756979e-05,1.0092,-0.6877
+D_1 (line) vs fitted floor share,77,0.32,0.00456408802569858,-0.4245,0.9579
+D_1: line slope vs pointwise ratio,45,0.38,0.010036261705200299,-0.1791,-0.131

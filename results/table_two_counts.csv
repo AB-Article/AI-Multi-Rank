@@ -1,0 +1,78 @@
+section,claim,value,status
+1,"(ln P)'' = w(1-w)(b1-b2)^2 e^{-(b1+b2)k} / P^2 >= 0, a two-atom task","a perfect square: Cauchy-Schwarz, no hypothesis used",pass
+1,so Q = -ln P is concave with Q(0) = 0 for every nu,log-convexity of a Laplace transform,pass
+2,"S(tk) <= t S(k) on a (k,t) grid, one atom (homogeneous)",min deficit -2.13821e-50,pass
+2,"S(tk) <= t S(k) on a (k,t) grid, two atoms",min deficit 0.0015811,pass
+2,"S(tk) <= t S(k) on a (k,t) grid, three atoms (the census)",min deficit 0.0113814,pass
+2,"S(tk) <= t S(k) on a (k,t) grid, panel-like (solved/lucky/wrong)",min deficit 0.0120984,pass
+2,"S(tk) <= t S(k) on a (k,t) grid, near-nested (hard class at 0.999)",min deficit 0.0875993,pass
+2,equality holds iff the task is a single atom (homogeneous),max |deficit| 2.67e-51,pass
+3,"1/t <= D(t) <= 1, one atom (homogeneous)","D(2)=1.0, D(5)=1.0, D(10)=1.0",pass
+3,"D(2) = 1/2 + L_1/(2 S(1)) exactly, one atom (homogeneous)","D(2) = 1.0, kappa = 0.6, L_1/S(1) = 1.0",pass
+3,"D(t) is non-increasing in t, one atom (homogeneous)",,pass
+3,"1/t <= D(t) <= 1, two atoms","D(2)=0.904, D(5)=0.6648, D(10)=0.4619",pass
+3,"D(2) = 1/2 + L_1/(2 S(1)) exactly, two atoms","D(2) = 0.90396, kappa = 0.7514, L_1/S(1) = 0.8079",pass
+3,"D(t) is non-increasing in t, two atoms",,pass
+3,"1/t <= D(t) <= 1, three atoms (the census)","D(2)=0.7554, D(5)=0.4389, D(10)=0.2712",pass
+3,"D(2) = 1/2 + L_1/(2 S(1)) exactly, three atoms (the census)","D(2) = 0.75537, kappa = 0.7047, L_1/S(1) = 0.5107",pass
+3,"D(t) is non-increasing in t, three atoms (the census)",,pass
+3,"1/t <= D(t) <= 1, panel-like (solved/lucky/wrong)","D(2)=0.7696, D(5)=0.4596, D(10)=0.2839",pass
+3,"D(2) = 1/2 + L_1/(2 S(1)) exactly, panel-like (solved/lucky/wrong)","D(2) = 0.76959, kappa = 0.6705, L_1/S(1) = 0.5392",pass
+3,"D(t) is non-increasing in t, panel-like (solved/lucky/wrong)",,pass
+3,"1/t <= D(t) <= 1, near-nested (hard class at 0.999)","D(2)=0.5197, D(5)=0.2086, D(10)=0.1047",pass
+3,"D(2) = 1/2 + L_1/(2 S(1)) exactly, near-nested (hard class at 0.999)","D(2) = 0.51972, kappa = 0.9553, L_1/S(1) = 0.03944",pass
+3,"D(t) is non-increasing in t, near-nested (hard class at 0.999)",,pass
+3,the archive's measured discount (co-failure panel),"S(2)/(2S(1)) = 0.547 (independent family), 0.522 (nested family); the bound is 1/2, so the panel sits 9.4 % and 4.4 % of S(1) from the perfectly nested end",note
+3,read as the price of the second attempt,D(2) - 1/2 = L_1/(2S(1)) gives L_1/S(1) = 0.094 and 0.044: the second attempt buys 4-9 % of what the first one did,note
+3,a two-atom task cannot reach 0.547 at plausible depth,"reaching the panel's discount needs mass within ~1e-3 of g = 1, i.e. an essentially unsolvable class -- the archive's own 'systematically wrong' atom, measured a second way",note
+4,"t_eff(t_r) < t_r for every t_r > 1, two atoms","t_r=2: t_eff=1.808, t_r=5: t_eff=3.324, t_r=10: t_eff=4.619",pass
+4,"retries delivering the corpus median grain 2.2, two atoms",t_r = 2.589 attempts,note
+4,"t_eff(t_r) < t_r for every t_r > 1, three atoms (the census)","t_r=2: t_eff=1.511, t_r=5: t_eff=2.194, t_r=10: t_eff=2.712",pass
+4,"retries delivering the corpus median grain 2.2, three atoms (the census)",t_r = 5.036 attempts,note
+4,"t_eff(t_r) < t_r for every t_r > 1, panel-like (solved/lucky/wrong)","t_r=2: t_eff=1.539, t_r=5: t_eff=2.298, t_r=10: t_eff=2.839",pass
+4,"retries delivering the corpus median grain 2.2, panel-like (solved/lucky/wrong)",t_r = 4.436 attempts,note
+4,"t_eff(t_r) < t_r for every t_r > 1, near-nested (hard class at 0.999)","t_r=2: t_eff=1.039, t_r=5: t_eff=1.043, t_r=10: t_eff=1.047",pass
+4,"retries delivering the corpus median grain 2.2, near-nested (hard class at 0.999)",t_r = 1346.0 attempts,note
+5,"eps -> eps^t sends c_k -> t c_k for k = 0..4, cure chart",,pass
+5,"N_eff -> t N_eff, cure chart",,pass
+5,"every D_k is invariant, cure chart",,pass
+5,"the arc scales as sqrt(t), cure chart",,pass
+5,"eps -> eps^t sends c_k -> t c_k for k = 0..4, stretched chart",,pass
+5,"N_eff -> t N_eff, stretched chart",,pass
+5,"every D_k is invariant, stretched chart",,pass
+5,"the arc scales as sqrt(t), stretched chart",,pass
+6,"m -> tm equals eps -> eps^t only for a single atom, one atom (homogeneous)","Q(tk) = 1.99222, tQ(k) = 1.99222",pass
+6,"m -> tm equals eps -> eps^t only for a single atom, two atoms","Q(tk) = 1.02252, tQ(k) = 1.33977",pass
+6,"m -> tm equals eps -> eps^t only for a single atom, three atoms (the census)","Q(tk) = 1.37364, tQ(k) = 2.44507",pass
+6,"m -> tm equals eps -> eps^t only for a single atom, panel-like (solved/lucky/wrong)","Q(tk) = 1.55152, tQ(k) = 2.65861",pass
+6,"m -> tm equals eps -> eps^t only for a single atom, near-nested (hard class at 0.999)","Q(tk) = 1.20787, tQ(k) = 3.57278",pass
+7,"1/N_eff^x = 1/N_eff^k + s_m/s, identically in (Q', Q'', m', m'')",,pass
+7,"hence N_eff^x <= N_eff^k, since m Bernstein gives s_m >= 0","equality iff m'' = 0, i.e. iff the axis is a count",pass
+7,"identity holds numerically, lambda=12, c=0.8, x = 0.3","N_eff^x 0.6131 <= N_eff^k 0.86963, s_m/s 0.4812, residual 2.94e-24",pass
+7,"identity holds numerically, lambda=12, c=0.8, x = 1.0","N_eff^x 0.31177 <= N_eff^k 0.78426, s_m/s 1.932, residual 2.18e-28",pass
+7,"identity holds numerically, lambda=12, c=0.8, x = 2.5","N_eff^x 0.11886 <= N_eff^k 3.2852, s_m/s 8.109, residual 3.26e-25",pass
+7,"identity holds numerically, lambda=40, c=0.25, x = 0.3","N_eff^x 0.72167 <= N_eff^k 0.79834, s_m/s 0.1331, residual 3.12e-24",pass
+7,"identity holds numerically, lambda=40, c=0.25, x = 1.0","N_eff^x 0.99669 <= N_eff^k 1.6607, s_m/s 0.4012, residual 9.85e-26",pass
+7,"identity holds numerically, lambda=40, c=0.25, x = 2.5","N_eff^x 1.5439 <= N_eff^k 221.79, s_m/s 0.6432, residual 7.64e-25",pass
+7,"identity holds numerically, lambda=100, c=0.1, x = 0.3","N_eff^x 0.75532 <= N_eff^k 0.78603, s_m/s 0.05173, residual 3.12e-24",pass
+7,"identity holds numerically, lambda=100, c=0.1, x = 1.0","N_eff^x 1.6842 <= N_eff^k 2.2135, s_m/s 0.142, residual 1.83e-24",pass
+7,"identity holds numerically, lambda=100, c=0.1, x = 2.5","N_eff^x 5.6299 <= N_eff^k 1415.0, s_m/s 0.1769, residual 4.19e-25",pass
+8,"N_eff^k >= 1 at the compute-axis canonical point, lambda=12, c=0.8","x* = 0.12206 -> 1.1164 attempts, task's own N_eff there = 1.4184",pass
+8,"N_eff^k >= 1 at the compute-axis canonical point, lambda=40, c=0.25","x* = 0.18239 -> 1.783 attempts, task's own N_eff there = 1.1086",pass
+8,"N_eff^k >= 1 at the compute-axis canonical point, lambda=100, c=0.1","x* = 0.1987 -> 1.9674 attempts, task's own N_eff there = 1.0416",pass
+9,"Shephard: s = E_p[a] = (1-p_0) alpha, x = 0.5",1.31792 vs 1.31792,pass
+9,"Fisher: kappa = Var_p(a) = p_0(1-p_0) alpha^2, x = 0.5",0.108176 vs 0.108176,pass
+9,"Law II = Law III: e^-R = sin phi = 2 sqrt(p_0 p_1), x = 0.5","R = KL(u||p) = 0.755321, sin phi = 0.46986",pass
+9,"Law IV: p_0 = 1/(1+N_eff) with N_eff = s^2/kappa, x = 0.5",,pass
+9,"the arc element is dS/sqrt(N_eff), x = 0.5",,pass
+9,"Shephard: s = E_p[a] = (1-p_0) alpha, x = 2.0",0.928014 vs 0.928014,pass
+9,"Fisher: kappa = Var_p(a) = p_0(1-p_0) alpha^2, x = 2.0",0.438009 vs 0.438009,pass
+9,"Law II = Law III: e^-R = sin phi = 2 sqrt(p_0 p_1), x = 2.0","R = KL(u||p) = 0.0560825, sin phi = 0.945461",pass
+9,"Law IV: p_0 = 1/(1+N_eff) with N_eff = s^2/kappa, x = 2.0",,pass
+9,"the arc element is dS/sqrt(N_eff), x = 2.0",,pass
+9,"Shephard: s = E_p[a] = (1-p_0) alpha, x = 4.0",0.149513 vs 0.149513,pass
+9,"Fisher: kappa = Var_p(a) = p_0(1-p_0) alpha^2, x = 4.0",0.186965 vs 0.186965,pass
+9,"Law II = Law III: e^-R = sin phi = 2 sqrt(p_0 p_1), x = 4.0","R = KL(u||p) = 0.481743, sin phi = 0.617706",pass
+9,"Law IV: p_0 = 1/(1+N_eff) with N_eff = s^2/kappa, x = 4.0",,pass
+9,"the arc element is dS/sqrt(N_eff), x = 4.0",,pass
+9,the theory in one line,eps(x) = E_nu[exp(-b m(x))]: the Laplace transform of the task's difficulty law at the attempt count the resource buys,note

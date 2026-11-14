@@ -1,0 +1,710 @@
+=== script 139 (139_class_gate_corpus.py) ===
+  -> results/table_class_gate.csv  (117 rows)
+  -> results/table_class_gate_summary.csv  (8 rows)
+
+  class gate by corpus (OUT_OF_CLASS = the selector refuses a winner)
+      corpus  n_frontiers  out_of_class  envelope  in_class  share_out  median_min_defect  median_widest_defect  widest_defect_negative  median_share_violating  divisibility_refuted
+         hpo           29             8         0        20   0.275862          -1.091955              0.263186                       8                0.206081                    28
+   materials            2             0         0         2   0.000000          -0.311879              0.087785                       0                0.137387                     2
+    medicine            7             4         1         2   0.571429          -0.165370             -0.085829                       4                0.500000                     4
+         nas           12             0         1        11   0.000000          -0.233112              0.059148                       0                0.165710                     0
+     tabular           43             3         3        36   0.069767          -0.021514              0.027056                       3                0.175000                    42
+      vision            9             2         0         7   0.222222          -0.264839              0.028327                       2                0.183150                     0
+vision-shift            9             6         0         3   0.666667          -0.326271             -0.036958                       6                0.747634                     0
+ vision-size            6             1         0         5   0.166667          -0.246563              0.045119                       1                0.100320                     0
+
+  distribution shift : 6 of 9 out of class
+  everything else    : 18 of 108 out of class
+  corpus-wide        : 24 of 117 (20.5%) refused outright, 5 flagged as envelopes
+
+  the discriminating statistic is the SHARE of wide triples that
+  violate convexity, not the minimum over them:
+    distribution shift : median share 0.748
+    everything else    : median share 0.168
+
+=== script 140 (140_precision_gate_corpus.py) ===
+  -> results/table_precision_gate.csv  (117 rows)
+
+  frontiers with a known evaluation-set size : 36 of 117
+  median sd(ln eps)                          : 11.46 milli-nats
+  the paper's required precision             : 0.73 milli-nats
+  N_eff resolved at the items they have      : 8 of 36
+  median items needed for N_eff              : 24,133
+  median grid-widening factor instead        : 1.9x  (cost in items scales as the 4th power, so this is the cheap route)
+  a 0.0589-nat gap is resolvable on        : 14 of 36
+  median items a 0.0589-nat decision needs : 8,664
+  -> results/table_precision_gate_summary.csv  (8 rows)
+
+      corpus  n_frontiers  median_grid_h  median_n_test_needed_for_Neff  median_n_test_needed_for_rho2_gap  median_widen_grid_by
+         hpo           29       0.184570                   3.732210e+03                        9797.549585                   NaN
+   materials            2            NaN                            NaN                       53304.546934                   NaN
+    medicine            7       0.519860                   0.000000e+00                       10174.243060                   NaN
+         nas           12       0.097903                   9.772820e+03                        4797.700334              1.414857
+     tabular           43       0.687657                   2.004728e+04                        9046.866302                   NaN
+      vision            9       0.240883                   1.153995e+07                        5776.902950             30.470797
+vision-shift            9       0.303337                   5.190346e+02                        1888.044668              0.131534
+ vision-size            6       0.050116                   1.190054e+06                        3838.383495              9.689730
+
+=== script 141 (141_count_axis_panel.py) ===
+  -> data/cofailure/passk_nested.csv
+  -> data/cofailure/passk_indep.csv
+  -> results/table_count_axis_panel.csv  (42 rows)
+  -> results/table_count_axis_summary.csv  (2 rows)
+  -> examples/model_selection/passk_fmnist_nested.csv
+
+family complete_monotone refuted_orders       P1  floor_lo  floor_hi       D2  second_attempt_worth  neff_count_median
+nested          IN_CLASS                0.274095    0.0518    0.0518 0.708557              0.417114           0.310650
+ indep          IN_CLASS                0.273467    0.0342    0.0342 0.726692              0.453385           0.690563
+
+  nested: complete monotonicity IN_CLASS on orders 1-3 (exact and signed at every spacing -- on the compute axis no bandwidth-free statistic reaches power 0.5)
+    floor      0.0518 <= eps_inf <= 0.0518 at 21 attempts, i.e. 18.9% of the one-attempt error -- two measured numbers, not an extrapolation
+    retries    D(2) = 0.709 against the bound 0.5: the second attempt buys 42% of the first, so a budget of 2 retries delivers grain 1.417, not 2
+    channels   N_eff on the count axis, median 0.311  (the task's own, not a lower bound)
+  indep: complete monotonicity IN_CLASS on orders 1-3 (exact and signed at every spacing -- on the compute axis no bandwidth-free statistic reaches power 0.5)
+    floor      0.0342 <= eps_inf <= 0.0342 at 21 attempts, i.e. 12.5% of the one-attempt error -- two measured numbers, not an extrapolation
+    retries    D(2) = 0.727 against the bound 0.5: the second attempt buys 45% of the first, so a budget of 2 retries delivers grain 1.453, not 2
+    channels   N_eff on the count axis, median 0.691  (the task's own, not a lower bound)
+
+=== script 142 (142_undersizing_measured.py) ===
+  -> results/table_undersizing.csv  (6 rows)
+
+family  grain_t  neff_compute_median  neff_count_median  lower_bound_holds  s_m_over_s  target_uncorrected  target_corrected
+nested      1.0             0.499124           0.310650              False    0.000000                1.00          1.000000
+nested      2.0             0.499124           0.310650              False    0.000000                0.50          0.500000
+nested      4.0             0.499124           0.310650              False    0.000000                0.25          0.250000
+ indep      1.0             0.227985           0.690563               True    2.938158                1.00          0.253926
+ indep      2.0             0.227985           0.690563               True    2.938158                0.50          0.202505
+ indep      4.0             0.227985           0.690563               True    2.938158                0.25          0.144130
+
+  N_eff^x <= N_eff^k holds on 3 of 6 readings.
+
+  The sign of the gap is a TEST, and it is the useful result here.
+  The identity N^x <= N^k assumes the count axis counts EXCHANGEABLE
+  attempts.  It holds on the independent family and fails on the
+  nested one -- where the archive's own panel refutes independence
+  (co-failure exceeds the prediction by a median 57%, at 19 standard
+  errors, and Pr[both fail] = kappa min(h_i,h_j) with kappa = 0.835).
+  So comparing the two readings is a cheap, bandwidth-free test of
+  whether the attempts a pipeline retries over are exchangeable at
+  all; where they are not, the count axis must be built from fresh
+  ITEMS, not from repeated tries on the same item.
+  indep: s_m/s = 2.938. At grain 1 the uncorrected rule fires at N_eff = 1.000 but the task's own criterion is met only at N_eff = 0.254, i.e. the uncorrected rule sizes the model for grain 1.0 when it should be sized for 3.94
+  nested: s_m/s = 0.000. At grain 1 the uncorrected rule fires at N_eff = 1.000 but the task's own criterion is met only at N_eff = 1.000, i.e. the uncorrected rule sizes the model for grain 1.0 when it should be sized for 1.00
+
+=== script 143 (143_selector_audit.py) ===
+  -> results/table_selector_audit.csv  (111 rows)
+  -> results/table_min_models.csv  (111 rows)
+  -> results/table_selector_audit_summary.csv  (3 rows)
+
+  A. worst-case regret in nats over the price range each frontier supports.
+     The benchmark is the best any SINGLE model can do against an unknown price
+     (minimax_best), not an oracle that knows it.
+              subset  n_frontiers  minimax_best  rule_worst  excess_over_minimax  tie_cheapest_worst  tie_minimax_worst  excess_tie_minimax  rule_is_minimax_share  minimax_in_tie_set_share  tie_set_size
+                 all          111      0.789886    1.078989             0.088398            1.061236           1.028441            0.017348               0.351351                  0.450450           1.0
+in class or envelope           91      0.632397    1.056087             0.088398            0.960972           0.900961            0.029337               0.340659                  0.450549           1.0
+       in class only           85      0.632397    1.069569             0.141801            1.056087           0.944866            0.045325               0.317647                  0.423529           1.0
+
+  the rule's own pick IS the minimax-optimal model on 34.1% of frontiers, and the minimax-optimal model is inside the tie set on 45.1%;
+  breaking the tie on worst-case regret instead of on cost cuts the median excess from 0.3286 to 0.0293 nats.
+
+  B. minimum model count: smallest K whose worst case over the whole price range is within rho_2 = 0.0589 nats
+    placed equally in arc    : median K = 4.0, reached on 72 of 111 frontiers
+    placed equally in logres : median K = 4.0, reached on 85 of 111 frontiers
+    K = 3: median worst case 0.1349 nats in arc against 0.1266 in log-resource  (log-resource wins)
+    K = 4: median worst case 0.0828 nats in arc against 0.0949 in log-resource  (arc wins)
+    K = 5: median worst case 0.0604 nats in arc against 0.0522 in log-resource  (log-resource wins)
+    the arc predicts 3.39 checkpoints at the median measured arc of 0.842 pi
+
+=== script 144 (144_multiresource_price.py) ===
+  -> results/table_multiresource_price.csv  (114 rows)
+  -> results/table_multiresource_decision.csv  (114 rows)
+
+  multi-resource blocks priced : 48 (114 axis prices derived)
+  median derived price          : 0.4238 nats/e-fold, range [0.0417, 6.5481]
+  dropping one axis changes the decision on 64.0% of (block, axis) pairs -- that share IS the answer to 'does this resource need a price?'
+    axes carrying an above-median cost share: 78.9% change the decision
+    axes carrying a below-median cost share: 49.1%
+
+  the interaction's own contribution, bounded rather than fitted:
+    n = 2 resources: canonical depth ln(1 + n^(1/theta)) = 1.0986 nats at theta = 1, 0.8814 at theta = 2, 0.6931 in the bottleneck limit
+    n = 3 resources: canonical depth ln(1 + n^(1/theta)) = 1.3863 nats at theta = 1, 1.0051 at theta = 2, 0.6931 in the bottleneck limit
+    n = 5 resources: canonical depth ln(1 + n^(1/theta)) = 1.7918 nats at theta = 1, 1.1744 at theta = 2, 0.6931 in the bottleneck limit
+
+=== script 145 (145_paired_band_panel.py) ===
+  -> results/table_paired_band_pairs.csv  (420 rows)
+  -> results/table_paired_band_summary.csv  (4 rows)
+
+  the gap between two candidates is PAIRED: same items, correlated failures.
+       subset  n_pairs  median_phi  median_cofailure_excess  median_sd_ratio  median_n_ratio  resolved_unpaired  resolved_paired  pairs_newly_resolved  share_newly_resolved
+          all      420    0.495914                 1.621588         0.737698        0.544198           0.961905         0.995238                    14              0.033333
+       nested      210    0.525656                 1.696485         0.716561        0.513464           0.966667         1.000000                     7              0.033333
+        indep      210    0.465518                 1.379662         0.753423        0.567647           0.957143         0.990476                     7              0.033333
+adjacent only       40    0.774388                 2.880984         0.475165        0.225795           0.625000         0.950000                    13              0.325000
+
+  median failure correlation phi : nested 0.526, independent-draw 0.466
+  median band shrinkage          : x0.738  (the unpaired band is 1.36x too wide)
+  median item-count saving       : x0.544  (the unpaired n_test is 1.84x too large)
+  comparisons resolved at the items in hand: 96.2% unpaired -> 99.5% paired  (14 of 420 pairs newly decided, at no extra cost)
+
+  This is the cheapest correctness gain in the pipeline: it uses the
+  per-item vector that already exists and no new input parameter.
+
+=== script 146 (146_certified_set.py) ===
+  -> results/table_certified_coverage.csv  (25200 rows)
+  -> results/table_certified_corpus.csv  (117 rows)
+  -> results/table_certified_summary.csv  (42 rows)
+
+  A/B.  Coverage under test-set noise, measured on the co-failure panel (300 replicates per cell, 2 families pooled).
+        'coverage' = the set contains the model that is TRULY optimal at the price drawn; nominal 1 - alpha = 90%.  'regret' in nats.
+
+   --- all 21 candidates ---
+ n_sub                                 policy  coverage  median_set_size  n_models  median_set_worst_regret  p90_regret
+   200                    band (v2, unpaired)  0.998333             14.0        21                 0.270604    0.092938
+   200                 band + paired sd (F11)  0.946667             10.0        21                 0.204859    0.092938
+   200      band, noise only (no rho_2 floor)  0.998333             14.0        21                 0.270604    0.092938
+   200           certified exact, price known  1.000000             21.0        21                 0.678212    0.092938
+   200   certified normal-paired, price known  0.995000             13.0        21                 0.244109    0.092938
+   200 certified normal-unpaired, price known  1.000000             16.0        21                 0.326050    0.092938
+   200        certified exact, price interval  1.000000             21.0        21                 0.738882    0.092938
+  1000                    band (v2, unpaired)  1.000000             10.0        21                 0.129165    0.029093
+  1000                 band + paired sd (F11)  0.965000              7.0        21                 0.075317    0.029093
+  1000      band, noise only (no rho_2 floor)  1.000000             10.0        21                 0.129165    0.029093
+  1000           certified exact, price known  1.000000             15.0        21                 0.259170    0.029093
+  1000   certified normal-paired, price known  1.000000             10.0        21                 0.115351    0.029093
+  1000 certified normal-unpaired, price known  1.000000             11.0        21                 0.155157    0.029093
+  1000        certified exact, price interval  1.000000             17.0        21                 0.384698    0.029093
+  5000                    band (v2, unpaired)  1.000000              7.0        21                 0.056134    0.013996
+  5000                 band + paired sd (F11)  1.000000              6.0        21                 0.041818    0.013996
+  5000      band, noise only (no rho_2 floor)  1.000000              7.0        21                 0.051232    0.013996
+  5000           certified exact, price known  1.000000              9.0        21                 0.076727    0.013996
+  5000   certified normal-paired, price known  1.000000              7.0        21                 0.045038    0.013996
+  5000 certified normal-unpaired, price known  1.000000              9.0        21                 0.066571    0.013996
+  5000        certified exact, price interval  1.000000             12.0        21                 0.178929    0.013996
+
+   --- 5 near neighbours ---
+ n_sub                                 policy  coverage  median_set_size  n_models  median_set_worst_regret  p90_regret
+   200                    band (v2, unpaired)  1.000000              5.0         5                 0.038603    0.039287
+   200                 band + paired sd (F11)  0.946667              5.0         5                 0.036386    0.039287
+   200      band, noise only (no rho_2 floor)  1.000000              5.0         5                 0.038603    0.039287
+   200           certified exact, price known  1.000000              5.0         5                 0.038603    0.039287
+   200   certified normal-paired, price known  0.985000              5.0         5                 0.036666    0.039287
+   200 certified normal-unpaired, price known  1.000000              5.0         5                 0.038603    0.039287
+   200        certified exact, price interval  1.000000              5.0         5                 0.038603    0.039287
+  1000                    band (v2, unpaired)  1.000000              5.0         5                 0.039271    0.027205
+  1000                 band + paired sd (F11)  0.971667              5.0         5                 0.034222    0.027205
+  1000      band, noise only (no rho_2 floor)  1.000000              5.0         5                 0.039271    0.027205
+  1000           certified exact, price known  1.000000              5.0         5                 0.039271    0.027205
+  1000   certified normal-paired, price known  0.995000              5.0         5                 0.036386    0.027205
+  1000 certified normal-unpaired, price known  0.998333              5.0         5                 0.038603    0.027205
+  1000        certified exact, price interval  1.000000              5.0         5                 0.039271    0.027205
+  5000                    band (v2, unpaired)  1.000000              5.0         5                 0.034435    0.016323
+  5000                 band + paired sd (F11)  0.998333              5.0         5                 0.031126    0.016323
+  5000      band, noise only (no rho_2 floor)  1.000000              5.0         5                 0.034435    0.016323
+  5000           certified exact, price known  1.000000              5.0         5                 0.034626    0.016323
+  5000   certified normal-paired, price known  0.998333              4.0         5                 0.027621    0.016323
+  5000 certified normal-unpaired, price known  1.000000              5.0         5                 0.034222    0.016323
+  5000        certified exact, price interval  1.000000              5.0         5                 0.036666    0.016323
+
+  the worst cell of each policy, over all 6 (zoo x item count) cells:
+    band (v2, unpaired)                      coverage 99.8%  (at n_sub = 200, all 21 candidates), median set 14 of 21
+    band + paired sd (F11)                   coverage 94.7%  (at n_sub = 200, all 21 candidates), median set 10 of 21
+    band, noise only (no rho_2 floor)        coverage 99.8%  (at n_sub = 200, all 21 candidates), median set 14 of 21
+    certified exact, price known             coverage 100.0%  (at n_sub = 200, all 21 candidates), median set 21 of 21
+    certified normal-paired, price known     coverage 98.5%  (at n_sub = 200, 5 near neighbours), median set 5 of 5
+    certified normal-unpaired, price known   coverage 99.8%  (at n_sub = 1000, 5 near neighbours), median set 5 of 5
+    certified exact, price interval          coverage 100.0%  (at n_sub = 200, all 21 candidates), median set 21 of 21
+
+  'p90_regret' is the same in every row by construction: every one of these sets
+  contains the best OBSERVED candidate, so they do not differ in what they pick --
+  they differ in what they allow you to DISCARD, which is 'median_set_size', and in
+  whether the model you must not discard is really in there, which is 'coverage'.
+
+  Read this carefully, because it changes what matters.  At a KNOWN
+  price the version-2 band over-covers: its rho_2 floor is wider
+  than the test-set noise at these item counts, so its misses are
+  NOT noise misses.  Strip the floor and it fails exactly where the
+  theory says ranking is delicate -- among near neighbours.  The
+  certificate holds in every cell, by construction, and is the only
+  one of these whose coverage is a guarantee rather than a
+  coincidence of the corpus.
+
+  C.  the corpus, where the certificate needs no class assumption:
+      36 frontiers with a public item count: median certified set 2 of 32 candidates at a known price, 7 with the price known only to a doubling either side.
+      a decision is reached (the set is smaller than the candidate list) on 100% at a known price and 97% with the price uncertain.
+      OUT_OF_CLASS: 24 frontiers, of which 9 have a public item count. Version 2 names no winner on any of them; the certificate returns a set on all 9, median size 1.
+
+  the price range the archived frontiers themselves support spans a median 6.71 e-folds of price, and the best SINGLE model against a price that free costs a median 0.637 nats --
+  which is where the real loss is: the price, not the noise.  Where the price is that free the answer is a SCHEDULE, not a model -- script 148.
+
+=== script 147 (147_design_rule.py) ===
+  -> results/table_design_rule.csv  (117 rows)
+  -> results/table_design_rule_summary.csv  (2 rows)
+
+  the prospective rule needs only: items, accuracy, an expected slope and the grain.
+  the outcome it has to predict is whether the quantity turns out to be identified at all, after the runs.
+      target  n  agreement  falsely_feasible  falsely_infeasible  share_feasible_predicted  share_identified_after
+price target 36   0.833333          0.166667            0.000000                  0.166667                0.000000
+N_eff target 36   0.750000          0.138889            0.111111                  0.138889                0.111111
+
+  The error that matters is the optimistic one -- designing a grid the data will not support.
+    price target  falsely FEASIBLE on 16.7% of 36 frontiers
+    N_eff target  falsely FEASIBLE on 13.9% of 36 frontiers
+
+  median grid actually used 0.227 in log-resource; the rule asks 1.170 for a price and 1.655 for a channel count -- factors of 5.8x and 8.3x.
+  stated as a design for 5 calibration points: the curve must span a resource ratio of 110x for a price and 777x for N_eff, cheapest to dearest.
+  That is the published corpus' real defect: not too few items, but a grid designed for plotting rather than for a second difference.
+
+  the two demo calibration curves (same truth, same items, grids x2 and x4):
+    calibration.csv        h = 0.693; rule asks 1.889 for a price -> INFEASIBLE and 2.671 for N_eff -> INFEASIBLE | after the fact the price is NOT identified
+    calibration_wide.csv   h = 1.386; rule asks 1.374 for a price -> FEASIBLE   and 1.943 for N_eff -> INFEASIBLE | after the fact the price is identified
+  -> results/table_design_rule_demo.csv  (2 rows)
+
+  The rule separates the two curves on the price target, the way
+  the tool separates them after the fact -- and it would have said
+  so before either curve was run.  Neither curve is wide enough
+  for N_eff, which is also what the tool reports afterwards.
+
+=== script 148 (148_sequential_design.py) ===
+  -> results/table_min_networks.csv  (117 rows)
+  -> results/table_schedule.csv  (72 rows)
+  -> results/table_min_networks_summary.csv  (6 rows)
+
+  A. the minimum number of networks, at tolerance rho_2 = 0.0589 nats, on 117 frontiers.
+     'supported' prices the whole range the frontier spans (median 6.71 e-folds);
+     'realistic' prices it to one doubling either side of the derived price (median 1.39 e-folds).
+    range placement  n_frontiers_reaching_rho2  median_K_min  mean_K_min  median_worst_K3  median_worst_K4  median_worst_K5
+supported       arc                         73           4.0    4.260274         0.139838         0.096674         0.061897
+supported    logres                         87           4.0    4.390805         0.126606         0.094854         0.054661
+supported    greedy                        117           3.0    3.393162         0.031431         0.002310         0.000000
+realistic       arc                         90           3.0    3.366667         0.080928         0.043533         0.013988
+realistic    logres                         96           3.0    3.875000         0.073022         0.056576         0.037960
+realistic    greedy                        117           3.0    2.512821         0.000000         0.000000         0.000000
+
+  supported : greedy median K = 3.0 (reached on 117 of 117), equal-arc 4.0, equal-log-resource 4.0
+  realistic : greedy median K = 3.0 (reached on 117 of 117), equal-arc 3.0, equal-log-resource 3.0
+
+  distinct models ever optimal over the range: median 5 over everything the frontier supports, 2 over a realistic interval.
+
+  B. the certified schedule, on the frontiers with a public item count:
+     supported  median 4 networks named by the schedule, median cell set 2 of 32 candidates; one compromise network instead costs 1.085 nats worst case
+     realistic  median 2 networks named by the schedule, median cell set 2 of 32 candidates; one compromise network instead costs 0.074 nats worst case
+
+  C. the stopping rule, read off the candidates in hand.  Its bound is the concave
+     upper envelope of Law I: the most an UNSEEN network could still be worth.
+     supported  K = 2: says STOP on 0%, truly covered on 20%, FALSE STOP on 0%, median bound inf nats
+     supported  K = 3: says STOP on 9%, truly covered on 63%, FALSE STOP on 0%, median bound 1.316 nats
+     supported  K = 4: says STOP on 14%, truly covered on 85%, FALSE STOP on 0%, median bound 0.414 nats
+     supported  K = 5: says STOP on 20%, truly covered on 94%, FALSE STOP on 0%, median bound 0.297 nats
+     realistic  K = 2: says STOP on 0%, truly covered on 37%, FALSE STOP on 0%, median bound inf nats
+     realistic  K = 3: says STOP on 21%, truly covered on 89%, FALSE STOP on 0%, median bound 1.033 nats
+     realistic  K = 4: says STOP on 21%, truly covered on 96%, FALSE STOP on 0%, median bound 0.237 nats
+     realistic  K = 5: says STOP on 21%, truly covered on 99%, FALSE STOP on 0%, median bound 0.367 nats
+  -> results/table_stopping_rule.csv  (8 rows)
+     supported : a CERTIFIED stop needs a median 5 networks (reached within 10 on 52 of 117); the measured truth needs 3.
+     realistic : a CERTIFIED stop needs a median 5 networks (reached within 10 on 63 of 117); the measured truth needs 3.
+     The difference is the price of certifying that no unseen network helps,
+     and it is the honest answer to 'how few networks': three to decide, more to prove.
+
+  The headline: the 'four networks' of script 143 is a property of
+  pricing over six e-folds, not of the frontier.  Design the
+  placement instead of spacing it evenly, and tell the tool what
+  the price actually is to within a doubling, and the number the
+  pipeline needs collapses -- which is exactly the requirement.
+
+=== script 149 (149_slope_bias_corrected.py) ===
+  -> results/table_slope_bias_truth.csv  (12 rows)
+
+  A. noise-free, against the known canonical price c = 0.4482:
+     h  K  price_h  price_corrected     err_h  err_corrected
+0.3500  7 0.447283         0.448191 -0.000917      -0.000009
+0.3500  9 0.447283         0.448191 -0.000917      -0.000009
+0.3500 13 0.447283         0.448191 -0.000917      -0.000009
+0.6931  7 0.444630         0.448067 -0.003570      -0.000133
+0.6931  9 0.444630         0.448067 -0.003570      -0.000133
+0.6931 13 0.444630         0.448067 -0.003570      -0.000133
+1.3863  7 0.434316         0.446347 -0.013884      -0.001853
+1.3863  9 0.434316         0.446347 -0.013884      -0.001853
+1.3863 13 0.434316         0.446347 -0.013884      -0.001853
+2.0000  7 0.420418         0.441468 -0.027782      -0.006732
+2.0000  9 0.420418         0.441468 -0.027782      -0.006732
+2.0000 13 0.420418         0.441468 -0.027782      -0.006732
+     |error| falls from a median 0.0087 to 0.0010 nats per e-fold, a factor 8.8.
+  -> results/table_slope_bias_noise.csv  (6 rows)
+
+  A. with binomial test-set noise -- the honest trade:
+     h  n_test  plugin_bias  plugin_sd  plugin_rmse  corrected_bias  corrected_sd  corrected_rmse  adaptive_rmse
+0.6931   10000     0.131626   0.149076     0.198870        0.175634      0.205143        0.270058       0.232383
+0.6931  100000    -0.004147   0.117501     0.117574        0.004066      0.157457        0.157509       0.121594
+0.6931 1000000    -0.036849   0.061946     0.072078       -0.043789      0.081437        0.092463       0.080113
+1.3863   10000    -0.024147   0.088629     0.091860       -0.013046      0.120557        0.121261       0.102952
+1.3863  100000    -0.031993   0.046253     0.056240       -0.023387      0.062620        0.066845       0.064185
+1.3863 1000000    -0.020476   0.016630     0.026378       -0.010467      0.022008        0.024370       0.026378
+     correcting always lowers the BIAS and always raises the variance, so it lowers RMSE on only 1 of 6 (grid, item-count) cells.
+     The rule the tool uses -- correct only when the estimated h^2 bias exceeds the price's own noise sd -- has RMSE within 17% of the better of the two in every cell, with no knowledge of the truth.
+  -> results/table_slope_bias_corpus.csv  (105 rows)
+
+  B. on 105 archived frontiers with at least seven readings: the correction raises the price on 73%,
+     which is the direction the bias predicts, by a median +19.2%.
+     Where it does not, the plane is not one smooth chart and the correction is not applicable -- the tool prints both numbers and
+     says which it used, rather than quietly correcting a curve that is not a curve.
+
+=== script 150 (150_envelope_threshold.py) ===
+  -> results/table_envelope_threshold.csv  (117 rows)
+  -> results/table_envelope_threshold_summary.csv  (3 rows)
+
+  the null is the frontier's own convex minorant plus its own binomial noise, 400 draws, 95th percentile of the violating share.
+                      subset  n  median_share_violating  median_null_q95  median_excess_over_null  envelope_or_worse_fixed_half  envelope_or_worse_calibrated
+all with a public item count 36                0.165710         0.183394                 0.048069                      0.277778                      0.694444
+          distribution shift  9                0.747634         0.603693                 0.096774                      0.666667                      1.000000
+             everything else 27                0.145136         0.166630                 0.033620                      0.148148                      0.592593
+
+  median threshold: the fixed rule says 0.500 everywhere; the calibrated one says 0.183 on this corpus,
+  so the constant was far too permissive -- noise alone does not produce anything like half.
+  verdicts that change: 15 of 36 (42%).
+      corpus                             frontier  share_violating  null_share_q95 verdict_fixed_half verdict_calibrated
+      vision                   ImageNet-1k__gmacs         0.114050        0.056198           IN_CLASS           ENVELOPE
+      vision                 ImageNet-1k__lat3090         0.103250        0.038241           IN_CLASS           ENVELOPE
+      vision                  ImageNet-1k__params         0.232816        0.057650           IN_CLASS           ENVELOPE
+vision-shift                 ImageNet-ReaL__gmacs         0.023316        0.015544           IN_CLASS           ENVELOPE
+vision-shift               ImageNet-ReaL__lat3090         0.050162        0.022654           IN_CLASS           ENVELOPE
+vision-shift                ImageNet-ReaL__params         0.114695        0.017921           IN_CLASS           ENVELOPE
+      vision             ImageNet-Sketch__lat3090         0.233043        0.081739           IN_CLASS           ENVELOPE
+      vision                 ImageNet-V2__lat3090         0.098361        0.080328           IN_CLASS           ENVELOPE
+      vision                  ImageNet-V2__params         0.183150        0.126374           IN_CLASS           ENVELOPE
+         nas         nb201|cifar10|raspi4_latency         0.372506        0.246120           IN_CLASS           ENVELOPE
+         nas           nb201|cifar10|fpga_latency         0.311313        0.204114           IN_CLASS           ENVELOPE
+         nas        nb201|cifar100|raspi4_latency         0.161855        0.108486           IN_CLASS           ENVELOPE
+         nas          nb201|cifar100|fpga_latency         0.248265        0.182729           IN_CLASS           ENVELOPE
+         nas nb201|ImageNet16-120|edgegpu_latency         0.081314        0.047694           IN_CLASS           ENVELOPE
+         nas    nb201|ImageNet16-120|fpga_latency         0.281226        0.238456           IN_CLASS           ENVELOPE
+
+  the separation the paper's finding rests on survives, and sharpens: distribution shift exceeds its own null by a median +0.097
+  against +0.034 elsewhere.  The statistic to report is the EXCESS over the instance's own null, not the raw share.
+
+=== script 151 (151_certified_ranking.py) ===
+  -> results/table_certified_ranking.csv  (36 rows)
+  -> results/table_certified_ranking_summary.csv  (3 rows)
+
+  the certified ranking on 36 frontiers with a public item count, alpha = 0.1:
+      subset  n_frontiers  median_candidates  median_tiers  median_top_tier  median_share_out_of_contention  median_share_pricefree_dominated  frontiers_with_contradictions
+         all           36               31.5           4.0             19.0                        0.438249                               0.0                              0
+    in class           26               36.5           4.0             21.0                        0.359142                               0.0                              0
+out of class            9               25.0           4.0             13.0                        0.566667                               0.0                              0
+
+  median candidate list 32; median 4 certified tiers; top tier 19 candidates, so 44% of a published frontier is certifiably out of contention.
+  the PRICE-FREE certificate alone retires 0% of candidates (median), with no price, no grain and no sweep: 4 of 36 frontiers have at least one such domination.
+    (it fires on only 4 of 36 here because an ARCHIVED FRONTIER is already Pareto-filtered:
+     dominated points were removed before publication. On a raw candidate list --
+     a competition leaderboard, a sweep of checkpoints -- it is the first test to run,
+     and the worked example shows it retiring a submission with no price at all.)
+  contradictory pairs (both directions certified, each an error of probability <= alpha/(K-1)): 0 of 36 frontiers.
+
+  A tier is the honest unit of a ranking: it is what the data can
+  separate.  Ordering inside a tier is presentation, not evidence.
+
+=== script 152 (152_selection_grade_price.py) ===
+  -> results/table_selection_grade.csv  (36 rows)
+  -> results/table_selection_grade_summary.csv  (1 rows)
+
+  on 36 frontiers with a public item count:
+    derived price's own 90% interval : median 4.92 doublings
+    a candidate's reign over prices  : median 1.00 doublings
+    => sharpen the price by a median factor 4.0 before it names one candidate
+       (7 of 36 frontiers are already sharp enough)
+
+    the two routes, from lambda* = sqrt(kappa/t):
+      widen the sweep by x2.5  (h from 0.227 to 0.387, a span of 5x over five points)
+      or buy x42 more items
+
+    for contrast, F13's kappa-grade rule asks h >= 1.68, a span of 853x -- a far stricter target,
+    because measuring the channel count is a far stricter demand than naming a winner.
+
+  So the automatic price is not blocked by anything in the theory.
+  It is blocked by a calibration sweep that nobody designs, and the
+  sweep it needs is a modest one: one model, five budgets, spanning
+  the order of ten in resource rather than the order of a thousand.
+
+=== script 153 (153_input_size_axis.py) ===
+  -> results/table_input_size_axis.csv  (6 rows)
+
+  the input-pixels axis of the archive, by how the points were produced:
+                             mode                                  frontier  n_points  span_ratio      verdict  widest_defect
+           retrained at each size       medmnist|blood|endToEnd|cost_pixels         9        64.0 OUT_OF_CLASS      -0.273940
+           retrained at each size       medmnist|derma|endToEnd|cost_pixels         9        64.0 OUT_OF_CLASS      -0.085829
+fixed backbone, input size varies  medmnist|derma|linearProbing|cost_pixels         8        64.0     IN_CLASS       0.442060
+           retrained at each size         medmnist|oct|endToEnd|cost_pixels        10        64.0 OUT_OF_CLASS      -0.139220
+fixed backbone, input size varies    medmnist|oct|linearProbing|cost_pixels         9        64.0     IN_CLASS       0.055301
+fixed backbone, input size varies medmnist|organa|linearProbing|cost_pixels        12        64.0     ENVELOPE       0.017794
+
+verdict                            ENVELOPE  IN_CLASS  OUT_OF_CLASS
+mode                                                               
+fixed backbone, input size varies         1         2             0
+retrained at each size                    0         0             3
+
+  fixed backbone, input size varies   : in class or envelope on 3 of 3, median widest chord defect +0.0553
+  retrained at each size              : in class or envelope on 0 of 3, median widest chord defect -0.1392
+
+  the axis itself is wide: a median span of 64x in cost over 9 points, against the order of ten that
+  F20 asks for.  Input size is therefore the cheapest sweep available -- and it is the only one
+  that requires no training at all.
+
+  CAVEAT, stated because it matters: n is small, and 'linearProbing' is a frozen backbone
+  re-probed per resolution rather than one deployed model at several input sizes. The
+  verdicts point the right way; they are not a proof. A deployment runs the gate on
+  its own sweep and finds out -- which is what the gate is for.
+
+  Two rules the geometry imposes on such a sweep:
+    1. stay at or below the training resolution. Above it accuracy FALLS with resource,
+       so those points are not Pareto and no frontier passes through them.
+    2. place the sizes geometrically, and record the resource you will pay for
+       (measured inference time on the target device), not the pixel count.
+
+=== script 154 (154_break_even_ladder.py) ===
+  -> results/table_break_even.csv  (1309 rows)
+  -> results/table_break_even_summary.csv  (1 rows)
+
+  1,309 adjacent Pareto pairs on the frontiers with a public item count.
+    undecided interval, per pair      : median 0.87 doublings (90th percentile 3.12)
+    the DERIVED price's own interval  : median 4.86 doublings
+    the ladder is sharper than the derived price on 96% of pairs
+
+    median break-even price 0.182 nats/e-fold, across a median resource step of 0.065 in log
+
+  So the smallest statement is also the sharpest available one. For a
+  deployment that can say ANYTHING about its own price -- even just 'below 0.5
+  nats per e-fold' -- the ladder decides, from one evaluation per candidate and
+  the per-item outcomes, with no sweep at all. The sweep earns its keep only when
+  nobody will name a price: then lambda* = sqrt(kappa/t) supplies one, and F20 says
+  how wide the sweep must be to make it sharper than these rungs.
+
+=== script 155 (155_price_envelope.py) ===
+  -> results/table_price_envelope.csv  (117 rows)
+  -> results/table_price_envelope_summary.csv  (9 rows)
+
+  on 117 archived frontiers, every one of them already Pareto-filtered:
+      subset  n_frontiers  median_n_pareto  median_n_lambda_reachable  median_share_unreachable  median_in_a_dent  median_reign_doublings
+         all          117             11.0                        5.0                  0.625000               6.0                2.411865
+         hpo           29             11.0                        4.0                  0.600000               7.0                2.375603
+   materials            2             10.0                        5.5                  0.449495               3.0                1.119110
+    medicine            7              9.0                        3.0                  0.666667               1.0                9.290821
+         nas           12             41.5                        5.5                  0.849624              30.5                1.226135
+     tabular           43              9.0                        5.0                  0.500000               5.0                2.864320
+      vision            9             29.0                        6.0                  0.793103              23.0                0.699309
+vision-shift            9             24.0                        2.0                  0.909091              20.0               17.830132
+ vision-size            6             79.0                        9.0                  0.891247              71.0                0.558477
+
+  median Pareto points                      : 11
+  median points a linear price can select   : 5
+  median share NEVER optimal at any price   : 62.5%  (mean 62.3%, max 95.0%)
+  of those, median sitting in a DENT        : 6 per frontier -- Pareto-efficient, and still never the answer
+
+  the ladder built on the envelope, on the 36 frontiers with a public item count:
+    rungs per frontier                 : 5
+    undecided interval per rung        : median 0.43 doublings
+    rungs decided on at least one side : 100%
+
+  Two consequences.  A Pareto frontier over-states the viable set by
+  a factor of two or more, so 'is this model on the frontier?' is the
+  wrong question -- the envelope answers the right one, and answers it
+  without identifying any frontier.  And the ladder must be built on
+  the envelope's breakpoints, not on cost neighbours: a dominated
+  candidate or one in a dent breaks a neighbour chain and cannot
+  break the envelope, because it never appears on it.
+
+=== script 156 (156_measurement_only.py) ===
+
+  A. q0 invariance, over q0 in (0.0, 0.001, 0.01, 0.1, 0.5), on every frontier:
+     largest deviation in any sigma DIFFERENCE : 1.776e-15
+     largest deviation in any break-even price : 4.974e-14
+     envelope winner sets that changed         : 0
+     -> q0 is not an input of the decision. It moves the floor and the depth readings only.
+  -> results/table_measurement_only.csv  (117 rows)
+  -> results/table_measurement_only_summary.csv  (1 rows)
+
+  B. the measurement-only decision on 117 frontiers (accuracy, resource, n_test; no price, grain or q0):
+     median candidates                 : 11
+     median that can ever be optimal   : 5   -> 62% retired outright
+     median rungs in the ladder        : 4  (they tile the whole price axis, so the answer is complete)
+     median undecided interval per rung: 0.43 doublings
+     rungs decided on at least one side: 100%
+
+  The answer is complete without a price: the rungs partition the
+  positive price axis, so whatever the deployment's price turns out
+  to be, exactly one candidate is named -- and the candidates that
+  are named by no price at all are retired with a proof.
+
+=== script 157 (157_input_routes.py) ===
+
+  A. the four routes, on the archive's own worked example:
+     A  measurements.csv                      reference, 28 lines
+     B  candidates.csv --items items.csv      IDENTICAL to the reference
+     C  candidates.csv --pairs pairs.csv      IDENTICAL to the reference
+     D  --model/--pair on the command line    IDENTICAL to the reference
+
+     verdict: all four routes agree
+
+  B. F24, the consistency gate.  One accuracy is perturbed by 100
+     items while its 2x2 table is left alone -- which is exactly how
+     a stale aggregate file beside a fresh table looks.
+     gate fires and refuses : True
+       net_a_small: accuracy implies a failure rate of 0.147000 but the net_a_small/net_d_int8 table implies 0.149000 (100 items apart)
+     --force proceeds anyway: True
+
+  C. F23 x F24: the consistency gate must not see the chance level.
+     q0=0.0   consistent inputs refused: False | stale input refused: True
+     q0=0.1   consistent inputs refused: False | stale input refused: True
+     q0=0.25  consistent inputs refused: False | stale input refused: True
+     q0=0.5   consistent inputs refused: False | stale input refused: True
+     the refusal message is identical at every q0: True
+     verdict: q0 cancels from the gate
+
+  Four shapes of the same evaluation, one answer; an input that
+  contradicts itself is refused rather than averaged; and the
+  chance level changes neither the answer nor the refusal.
+
+=== script 158 (158_floor_share_null.py) ===
+  wrote /home/claude/art/Zenodo/results/table_floor_share_null.csv  (28 rows)
+  wrote /home/claude/art/Zenodo/results/table_floor_share_null_summary.csv  (12 rows)
+==============================================================================
+T1/T2  THE ZERO-FLOOR NULL, TWO WINDOWS
+
+  script-76 window (8 nats, 22 points)
+    beta= 0.05  fitted floor / best observed error = 0.976  [0.366,1.011]
+    beta= 0.10  fitted floor / best observed error = 0.958  [0.824,0.996]
+    beta= 0.15  fitted floor / best observed error = 0.927  [0.868,0.982]
+    beta= 0.20  fitted floor / best observed error = 0.876  [0.831,0.963]
+    beta= 0.25  fitted floor / best observed error = 0.833  [0.767,0.902]
+    beta= 0.30  fitted floor / best observed error = 0.793  [0.719,0.858]
+    beta= 0.40  fitted floor / best observed error = 0.709  [0.643,0.769]
+    beta= 0.50  fitted floor / best observed error = 0.617  [0.575,0.668]
+    beta= 0.60  fitted floor / best observed error = 0.515  [0.472,0.566]
+    beta= 0.70  fitted floor / best observed error = 0.426  [0.393,0.466]
+    beta= 0.80  fitted floor / best observed error = 0.315  [0.283,0.353]
+    beta= 0.90  fitted floor / best observed error = 0.182  [0.150,0.213]
+    beta= 0.95  fitted floor / best observed error = 0.097  [0.066,0.128]
+    beta= 0.99  fitted floor / best observed error = 0.023  [0.000,0.048]
+
+  archive median design (5.1 nats, 11 points)
+    beta= 0.05  fitted floor / best observed error = 0.978  [0.000,1.014]
+    beta= 0.10  fitted floor / best observed error = 0.957  [0.525,1.007]
+    beta= 0.15  fitted floor / best observed error = 0.917  [0.659,0.993]
+    beta= 0.20  fitted floor / best observed error = 0.863  [0.763,0.944]
+    beta= 0.25  fitted floor / best observed error = 0.812  [0.645,0.922]
+    beta= 0.30  fitted floor / best observed error = 0.773  [0.670,0.852]
+    beta= 0.40  fitted floor / best observed error = 0.663  [0.581,0.779]
+    beta= 0.50  fitted floor / best observed error = 0.529  [0.443,0.616]
+    beta= 0.60  fitted floor / best observed error = 0.447  [0.376,0.526]
+    beta= 0.70  fitted floor / best observed error = 0.374  [0.294,0.419]
+    beta= 0.80  fitted floor / best observed error = 0.258  [0.191,0.301]
+    beta= 0.90  fitted floor / best observed error = 0.128  [0.086,0.182]
+    beta= 0.95  fitted floor / best observed error = 0.072  [0.023,0.111]
+    beta= 0.99  fitted floor / best observed error = 0.007  [0.000,0.052]
+
+==============================================================================
+T3  WHAT THE ARCHIVE ACTUALLY MEASURES
+    all frontiers (script 133)           n=117  median share = 0.956
+    second-order-readable (script 81)    n= 92  median share = 0.991
+    chart-test route (script 84)         n= 92  median share = 0.980
+
+==============================================================================
+T4  THE SHAPE INDEX THAT REPRODUCES IT WITH NO FLOOR AT ALL
+    script-76 window (8 nats, 22 points)         beta = 0.104
+    archive median design (5.1 nats, 11 points)  beta = 0.101
+
+  The fitted floor share is a monotone readout of the shape index;
+  the archive's median share is reproduced by a frontier with NO
+  floor anywhere in it.  There is no numerical coincidence to quote,
+  and none is needed: the whole measured range is inside the null.
+
+=== script 159 (159_exponent_decomposition.py) ===
+  wrote /home/claude/art/Zenodo/results/table_exponent_decomposition.csv  (15 rows)
+==============================================================================
+ln(alpha) OVER 41 CELLS: HOW MUCH IS THE AXIS, HOW MUCH THE TASK
+==============================================================================
+  cells (axis x task x frontier)                             41.0000
+  axes                                                        6.0000
+  tasks (evaluation sets)                                     5.0000
+  eta2 of ln(alpha) by axis                                   0.6317
+  eta2 of ln(alpha) by task                                   0.6522
+  R2 additive, axis only                                      0.6317
+  R2 additive, task only                                      0.6522
+  R2 additive, axis + task                                    0.9759
+  R2 additive, axis + task, adjusted                          0.9688
+  increment from task identity (R2 both - R2 axis)            0.3442
+  increment from axis identity (R2 both - R2 task)            0.3237
+  parameters in the additive model                           10.0000
+  borrowed alpha, median rel. error, same axis any task       0.1238
+  borrowed alpha, median rel. error, same axis other tasks     0.2409
+  borrowed alpha within a factor 2, same axis other tasks     0.9412
+
+  The axis carries most of ln(alpha) but the task carries a lot too:
+  task identity adds 0.34 to R^2, not 0.007.  The operational reading
+  is D3: a borrowed exponent is good to a factor of two across tasks.
+
+=== script 160 (160_arc_deficit_gauge.py) ===
+  wrote /home/claude/art/Zenodo/results/table_arc_deficit_gauge.csv  (26 rows)
+  wrote /home/claude/art/Zenodo/results/table_arc_deficit_gauge_summary.csv  (12 rows)
+==============================================================================
+THE ARC DEFICIT: THE SHARES MUST BE READ AT THE CROSSOVER
+
+T1 gauge
+  case                                     quadrature          raw    crossover
+  a=(0,1,1000), x -> x+0                    1.4975922    1.5000000    1.5001104
+  a=(0,1,1000), x -> x+1                    1.4975922    1.3470900    1.5001104
+  a=(0,1,1000), x -> x+2                    1.4975922    1.2244170    1.5001104
+  a=(0,1,1000), x -> x+-2                   1.4975922    1.7755830    1.5001104
+  a=(0,1,1000), x -> x+5                    1.4975922    1.0521400    1.5001104
+
+T2 weights
+  case                                     quadrature          raw    crossover
+  a=(0,1,1000), c=(1,1,e^-5000)             1.9474839    1.5000000    1.9479899
+  a=(0,1,1000), c=(1,1,e^+5000)             1.0516376    1.5000000    1.0521402
+  a=(0,1,1000), c=(1,100,1)                 1.9360923    1.9365490    1.9366944
+
+T3 rate limit
+  case                                     quadrature          raw    crossover
+  a=(0,1,2), equal weights                  1.2970236    1.5000000    1.5758588
+  a=(0,1,10), equal weights                 1.4040217    1.5000000    1.5116210
+  a=(0,1,100), equal weights                1.4832000    1.5000000    1.5011087
+  a=(0,1,1000), equal weights               1.4975922    1.5000000    1.5001104
+  a=(0,1,1000000), equal weights            1.4999954    1.5000000    1.5000001
+
+T4 separated
+  case                                     quadrature          raw    crossover
+  separated spectrum #1                     1.9798443    1.9798750    1.9798704
+  separated spectrum #2                     1.0063650    1.0063660    1.0063661
+  separated spectrum #3                     1.9428296    1.9428834    1.9429131
+  separated spectrum #4                     2.9597341    2.9597400    2.9597402
+  separated spectrum #5                     1.2149787    1.2150158    1.2150287
+
+T5 archive eight
+  case                                     quadrature          raw    crossover
+  weights (1, 1, 1), a=(0,1,1e8)            1.4999999    1.5000000    1.5000000
+  weights (1, 3, 1), a=(0,1,1e8)            1.6666666    1.6666667    1.6666667
+  weights (2, 1, 1), a=(0,1,1e8)            1.3918265    1.3918266    1.3918266
+  weights (1, 1, 3), a=(0,1,1e8)            1.4999999    1.5000000    1.5000000
+  weights (3, 1, 1), a=(0,1,1e8)            1.3333333    1.3333333    1.3333333
+  weights (1, 2, 2), a=(0,1,1e8)            1.6081734    1.6081734    1.6081734
+  weights (2, 2, 1), a=(0,1,1e8)            1.4999999    1.5000000    1.5000000
+  weights (1, 1, 2), a=(0,1,1e8)            1.4999999    1.5000000    1.5000000
+
+==============================================================================
+  T1  distinct L from quadrature across five gauges (should be 1) 1.000000
+  T1  distinct raw-weight values across the same five gauges     5.000000
+  T1  distinct crossover values across the same five gauges      1.000000
+  T1  max relative error, raw-weight form                        2.974e-01
+  T1  max relative error, crossover form                         1.681e-03
+  T2  max relative error, raw-weight form                        4.263e-01
+  T2  max relative error, crossover form                         4.779e-04
+  T3  relative error of the closed form at A = 2 (equal weights) 2.150e-01
+  T3  relative error of the closed form at A = 1e6 (equal weights) 3.143e-06
+  T4  max relative error, crossover form, separated spectra      4.299e-05
+  T5  max relative error, raw-weight form, archive's eight       4.173e-08
+  overall max relative error, crossover form, separated cases only 1.681e-03
+
+  Read T1 first: the quadrature returns ONE value across the five
+  gauges, the crossover form returns one, and the raw-weight form
+  returns five.  T3 is the separated-rate limit the proposition is
+  stated in; T5 is why the archive's original check did not catch it.
+
+DONE

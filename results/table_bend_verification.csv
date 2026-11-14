@@ -1,0 +1,5 @@
+result,max_deviation
+B = KL(p_x2 || p_x1),3.207317652110635e-50
+B = int (u-x1) kappa(u) du,1.0691058840368783e-50
+min B over draws (must be >= 0),0.006561748140108594
+B = 0 for a single atom,1.0691058840368783e-50

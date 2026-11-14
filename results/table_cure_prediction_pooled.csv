@@ -1,0 +1,6 @@
+method,n_points,R2_log,median_abs_nats,median_rel_pct
+cure,2013,0.9712,0.0258,2.57
+law,2025,0.9897,0.026,2.6
+stable,2025,0.6883,0.0218,2.18
+power,2025,0.9752,0.0438,4.38
+interp,2025,0.9894,0.0106,1.06

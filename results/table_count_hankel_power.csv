@@ -1,0 +1,16 @@
+truth,n_items,rung1_reject,rung2_reject,rung1_frac_neg,rung2_frac_neg
+two atoms in g (indivisible),10000,0.0,0.0,0.5455,0.819
+two atoms in g (indivisible),100000,0.0,0.0,0.6165,0.76
+two atoms in g (indivisible),1000000,0.0,0.0,0.853,0.917
+two atoms in g (indivisible),10000000,1.0,1.0,0.9985,1.0
+two atoms in g (indivisible),100000000,1.0,1.0,1.0,1.0
+"three atoms in g (indivisible, the archive's census)",10000,0.0,0.0,0.0245,0.5715
+"three atoms in g (indivisible, the archive's census)",100000,0.0,0.0,0.0,0.545
+"three atoms in g (indivisible, the archive's census)",1000000,0.0,0.0,0.0,0.6195
+"three atoms in g (indivisible, the archive's census)",10000000,0.0,0.0,0.0,0.8035
+"three atoms in g (indivisible, the archive's census)",100000000,0.0,1.0,0.0,0.9955
+four atoms in g (indivisible),10000,0.0,0.0,0.128,0.585
+four atoms in g (indivisible),100000,0.0,0.0,0.0,0.4955
+four atoms in g (indivisible),1000000,0.0,0.0,0.0,0.468
+four atoms in g (indivisible),10000000,0.0,0.0,0.0,0.367
+four atoms in g (indivisible),100000000,0.0,0.0,0.0,0.1205

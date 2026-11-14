@@ -1,0 +1,8 @@
+cells 41
+pairs 13278
+identity 1.000000
+bracket 0.930035
+alpha_global_median 0.416269
+median_resid 0.044920
+median_p0_pair 0.524476
+median_sbar_over_alpha 0.475524

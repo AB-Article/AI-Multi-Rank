@@ -1,0 +1,8 @@
+result,max_deviation
+L = 2[asin sqrt(p1) - asin sqrt(p2)] (two atoms),8.861885491899436e-50
+complete transition length = pi (two atoms),2.34308140959759e-12
+L = 0 for a single atom (pure power law),7.138028838963449e-35
+min total length over K+1 atoms minus pi (must be >= 0),-6.398860518385353e-13
+separated K+1 atoms: total length = K*pi,0.00030893092516738596
+Gamma spectrum: g = 1/k constant,2.6727647100921956e-51
+speed limit L^2 - dx*(s1-s2) <= 0 (max value),-2.9435437538106412e-05

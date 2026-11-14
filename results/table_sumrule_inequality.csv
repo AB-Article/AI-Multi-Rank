@@ -1,0 +1,4 @@
+family,n,min_ratio,median_ratio
+floor + 1 channel,60,1.0,1.0
+floor + 2 channels,60,1.0003950964746038,1.1349699742971353
+"4 atoms, no floor",60,1.0172787871421107,1.424059449850966

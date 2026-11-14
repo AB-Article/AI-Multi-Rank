@@ -1,0 +1,12 @@
+test,value
+random spectra points tested,229324.0
+worst float64 value of w2-(1-w),0.005859375
+same case recomputed at 60 digits,0.0
+=> float64 excess is cancellation (0 = equality case),1.0
+"slack (1-w)-w2, min over window: {0,alpha}: floor + 1 channel",-5.684341886080802e-14
+"slack (1-w)-w2, min over window: {0,a1,a2}: floor + 2 channels",0.026084534358261635
+"slack (1-w)-w2, min over window: {a1,a2}: two atoms, no floor",0.6574473890917376
+"slack (1-w)-w2, min over window: Gamma(2) continuum, no floor",1.3372401998670778
+"slack (1-w)-w2, min over window: Gamma(2) + floor",1.3372401998670778
+random spectra whose local floor ever increases,0.0
+random spectra tested for monotonicity,17138.0

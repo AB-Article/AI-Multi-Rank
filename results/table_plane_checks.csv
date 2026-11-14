@@ -1,0 +1,138 @@
+check,passed,detail
+A1 cure           sigma=-1: N affine in S,1,max dev 7.95e-61
+A2 cure           sigma=-1: slope = sigma,1,slope -1.0
+A3 cure           sigma=-1: S-intercept = -ln eps_inf,1,intercept 5.0 vs 5.0
+A1 power-floor b=-0.5: N affine in S,1,max dev 7.78e-62
+A3 power-floor b=-0.5: S-intercept = -ln eps_inf,1,intercept 4.0 vs 4.0
+A1 power-floor b=-2.0: N affine in S,1,max dev 1.41e-61
+A3 power-floor b=-2.0: S-intercept = -ln eps_inf,1,intercept 3.0 vs 3.0
+A1 Lomax k=2.5    sigma=0: N affine in S,1,max dev 9.33e-61
+A2 Lomax k=2.5    sigma=0: slope = sigma,1,slope 3.489460296e-61
+A3 Lomax k=2.5    sigma=0: slope>=0 <=> no floor,1,slope 3.48946e-61
+A1 stretched b=0.6: N affine in S,1,max dev 1.87e-60
+A3 stretched b=0.6: slope>=0 <=> no floor,1,slope 1.5
+A1 stretched b=0.3: N affine in S,1,max dev 3.11e-61
+A3 stretched b=0.3: slope>=0 <=> no floor,1,slope 0.428571
+B1 two-atom: N <= e^dS - 1 (axiom wall),1,0 violations/39
+B2 two-atom: N > dS somewhere (indivisible),1,39/39 above tangent
+B1 cure: N <= e^dS - 1 (axiom wall),1,0 violations/39
+B2 cure: N <= dS (hypothesis wall),1,0 violations/39
+B1 power-floor: N <= e^dS - 1 (axiom wall),1,0 violations/39
+B2 power-floor: N <= dS (hypothesis wall),1,0 violations/39
+B1 3 atoms+floor: N <= e^dS - 1 (axiom wall),1,0 violations/39
+B2 3 atoms+floor: N > dS somewhere (indivisible),1,30/39 above tangent
+B1 5 atoms+floor: N <= e^dS - 1 (axiom wall),1,0 violations/39
+B2 5 atoms+floor: N > dS somewhere (indivisible),1,22/39 above tangent
+"B3 two-atom chart IS the axiom wall, N = e^dS - 1",1,max dev 3.98e-59
+"B4 cure chart IS the hypothesis wall, N = dS",1,max dev 9.33e-61
+B5 the hypothesis wall is the tangent of the axiom wall at the origin,1,"g(0)=0, g'(0)=1"
+C1 two-atom: eps/(1+N) >= eps_inf  (= eps_A),1,0 violations
+C1 cure: eps/(1+N) >= eps_inf  (= eps_A),1,0 violations
+C2 cure: eps*e^-N >= eps_inf  (= eps_W),1,0 violations
+C1 power-floor: eps/(1+N) >= eps_inf  (= eps_A),1,0 violations
+C2 power-floor: eps*e^-N >= eps_inf  (= eps_W),1,0 violations
+C1 5 atoms+floor: eps/(1+N) >= eps_inf  (= eps_A),1,0 violations
+C3 eps*e^-N <= eps/(1+N) always,1,e^-N(1+N)<=1
+D1 h=0.2: eps_A -> eps/(1+N),1,gap 9.02e-61
+D2 h=0.2: eps_W -> eps*e^-N,1,gap 2.51e-20
+D1 h=0.05: eps_A -> eps/(1+N),1,gap 2.33e-61
+D2 h=0.05: eps_W -> eps*e^-N,1,gap 1.49e-21
+D1 h=0.0125: eps_A -> eps/(1+N),1,gap 3.27e-58
+D2 h=0.0125: eps_W -> eps*e^-N,1,gap 9.3e-23
+E1 int sqrt(kappa) dx = int dS/sqrt(N_eff),1,1.7866253280445 vs 1.7866253280445
+E2 two-atom total arc = 2 arccos sqrt(eps_inf)  [floor 0.004],1,3.01501706763 vs 3.01501706763
+E2 two-atom total arc = 2 arccos sqrt(eps_inf)  [floor 0.05],1,2.69056584179 vs 2.69056584179
+E2 two-atom total arc = 2 arccos sqrt(eps_inf)  [floor 0.2],1,2.21429743559 vs 2.21429743559
+E3 spectrum 0: L >= 2 arccos sqrt(eps_inf),1,L 4.050779039  bound 2.941257811  slack 1.11
+E3 spectrum 1: L >= 2 arccos sqrt(eps_inf),1,L 5.151943266  bound 3.015017068  slack 2.137
+E3 spectrum 2: L >= 2 arccos sqrt(eps_inf),1,L 2.725275633  bound 2.690565842  slack 0.03471
+E4 cure total arc = 2 sqrt(lambda)  [lambda 2.0],1,2.82842712475 vs 2.82842712475
+E4 cure total arc = 2 sqrt(lambda)  [lambda 5.0],1,4.472135955 vs 4.472135955
+E4 cure total arc = 2 sqrt(lambda)  [lambda 9.0],1,6.0 vs 6.0
+E5 power-floor: L >= 2 sqrt(lambda) (divisible bound),1,L 4897.579631 bound 4.898979486
+E6 the divisible bound beats pi exactly beyond pi^2/4 nats,1,pi^2/4 = 2.4674011 nats
+E7 pi = int_0^inf du/sqrt(e^u - 1)  (Law III's constant as the axiom wall's area),1,
+F1 two-atom t=1: lambda* = sqrt(kappa/t) = s,1,s 0.45
+F2 two-atom t=1: s = alpha/(1+t) at the operating point,1,0.45 vs 0.45
+F3 two-atom t=1: dS* = ln(1+1/t),1,
+F1 two-atom t=2: lambda* = sqrt(kappa/t) = s,1,s 0.3
+F2 two-atom t=2: s = alpha/(1+t) at the operating point,1,0.3 vs 0.3
+F3 two-atom t=2: dS* = ln(1+1/t),1,
+F1 two-atom t=5: lambda* = sqrt(kappa/t) = s,1,s 0.15
+F2 two-atom t=5: s = alpha/(1+t) at the operating point,1,0.15 vs 0.15
+F3 two-atom t=5: dS* = ln(1+1/t),1,
+F1 cure t=1: lambda* = sqrt(kappa/t) = s,1,s 0.7
+F4 cure t=1: dS* = 1/t,1,
+F1 cure t=2: lambda* = sqrt(kappa/t) = s,1,s 0.35
+F4 cure t=2: dS* = 1/t,1,
+F1 cure t=5: lambda* = sqrt(kappa/t) = s,1,s 0.14
+F4 cure t=5: dS* = 1/t,1,
+F1 power-floor t=2: lambda* = sqrt(kappa/t) = s,1,s 0.421875
+F1 power-floor t=5: lambda* = sqrt(kappa/t) = s,1,s 0.027
+F1 3 atoms+floor t=2: lambda* = sqrt(kappa/t) = s,1,s 0.133333539134
+G1 two-atom elbow (c3=0) sits at dS = ln 2 exactly,1,dS_elbow 0.69314718055995
+G2 and c3 vanishes there,1,c3(elbow) = -5.23e-68
+G3 at grain 1 the operating point IS the elbow,1,"x* = 6.13050321829412, x_elbow = 6.13050321829412"
+G4 the band at grain 1 is one nat minus one bit,1,1 - ln2 = 0.30685281944
+G5 grain leverage = ln2 - ln(1+1/t) <= ln 2 (one bit) for every t>=1,1,
+"H1 grain multiplies S, dS, N_eff by exactly t",1,N 7.28593362794 = 7.28593362794
+H2 the operating rule N=1/t is N^unit=1 (regret zero in delivered units),1,
+H3 regret is invariant under N -> 1/N; its unique fixed point is N=1,1,
+I1 3 atoms+floor: s recovered from N(S) by quadrature,1,max rel err 1.56e-61
+I1 power-floor: s recovered from N(S) by quadrature,1,max rel err 3.11e-61
+I1 two-atom: s recovered from N(S) by quadrature,1,max rel err 1.56e-61
+"J1 h=0.4: N_hat=(l+ - l-)^2/[4(l- -2l0 +l+)] -> N_eff, no h in the formula",1,err 0.42
+"J1 h=0.1: N_hat=(l+ - l-)^2/[4(l- -2l0 +l+)] -> N_eff, no h in the formula",1,err 0.0264
+J2 h=0.1: error falls as h^2,1,0.0264 vs 0.42
+"J1 h=0.025: N_hat=(l+ - l-)^2/[4(l- -2l0 +l+)] -> N_eff, no h in the formula",1,err 0.00165
+J2 h=0.025: error falls as h^2,1,0.00165 vs 0.0264
+K0 divisible: compound-Poisson : P(0)=1,1,
+K1 divisible: compound-Poisson : L is a moment sequence (all minors >= 0),1,2x2@0 7.779e-62  3x3@0 0
+"K2 divisible: compound-Poisson : L_m completely monotone (decreasing, convex)",1,
+K0 divisible: Lomax            : P(0)=1,1,
+K1 divisible: Lomax            : L is a moment sequence (all minors >= 0),1,2x2@0 0.06066  3x3@0 0.0002221
+"K2 divisible: Lomax            : L_m completely monotone (decreasing, convex)",1,
+K0 indivisible: floor+one class: P(0)=1,1,
+K3 indivisible: floor+one class: rung 1 at offset 0 and 1 agree in verdict,1,L0L2-L1^2 = -0.03575 ; L1L3-L2^2 = -0.0384
+"K4 indivisible: floor+one class: offset-0 rung 1 is CHEAPER, not larger (recorded)",1,T0 -0.08093 vs T1 -0.1241  |T0/T1| 0.6523
+K5 indivisible: floor+one class: rung 2 at offset 0 refutes from P(1..5),1,"det -0.0009695 (offset 1, P(1..6): -0.0006533)"
+K0 indivisible: 3-class census: P(0)=1,1,
+K3 indivisible: 3-class census: rung 1 at offset 0 and 1 agree in verdict,1,L0L2-L1^2 = 0.008741 ; L1L3-L2^2 = 0.00489
+"K4 indivisible: 3-class census: offset-0 rung 1 is CHEAPER, not larger (recorded)",1,T0 0.184 vs T1 0.5676  |T0/T1| 0.3242
+K5 indivisible: 3-class census: rung 2 at offset 0 refutes from P(1..5),1,"det -0.0001883 (offset 1, P(1..6): -2.232e-6)"
+K6 indivisible: 3-class census: and normalised it is the LARGER determinant,1,|det|/prod(diag): offset0 0.07319 vs offset1 0.004076  ratio 17.96
+L1 floor 0.01: every CM frontier needs >= 4.65 points at 0.05 nats,1,K_min = 4.6505
+L2 floor 0.01: a DIVISIBLE one needs >= 6.79,1,6.7861 vs 4.6505
+L1 floor 0.001: every CM frontier needs >= 4.87 points at 0.05 nats,1,K_min = 4.8673
+L2 floor 0.001: a DIVISIBLE one needs >= 8.31,1,8.3113 vs 4.8673
+M1 power-floor: dN/dS >= -1 pointwise (rung 1),1,0 violations
+M2 cure: dN/dS = -1 exactly (the extremal of rung 1),1,max dev 0.0
+M3 N -> 0 at the floor: the curve passes through the origin of the plane,1,N(x=30) = 3.79e-9
+N1 two-atom h=0.3: axiom = D2 ln(eps) >= 0,1,min 0.00065
+N2 two-atom h=0.3: growth refutes; its absence proves nothing (one-sided),1,D2 rises 7/7 steps -> REFUTED
+N1 two-atom h=1.0: axiom = D2 ln(eps) >= 0,1,min 0.0141
+N2 two-atom h=1.0: growth refutes; its absence proves nothing (one-sided),1,D2 rises 5/7 steps -> REFUTED
+N1 cure h=0.3: axiom = D2 ln(eps) >= 0,1,min 0.0271
+N2 cure h=0.3: hypothesis = D2 never grows (exact at this h),1,
+N1 cure h=1.0: axiom = D2 ln(eps) >= 0,1,min 0.0062
+N2 cure h=1.0: hypothesis = D2 never grows (exact at this h),1,
+N1 power-floor h=0.3: axiom = D2 ln(eps) >= 0,1,min 0.00872
+N2 power-floor h=0.3: hypothesis = D2 never grows (exact at this h),1,
+N1 power-floor h=1.0: axiom = D2 ln(eps) >= 0,1,min 0.00698
+N2 power-floor h=1.0: hypothesis = D2 never grows (exact at this h),1,
+N1 Lomax h=0.3: axiom = D2 ln(eps) >= 0,1,min 0.0122
+N2 Lomax h=0.3: hypothesis = D2 never grows (exact at this h),1,
+N1 Lomax h=1.0: axiom = D2 ln(eps) >= 0,1,min 0.0256
+N2 Lomax h=1.0: hypothesis = D2 never grows (exact at this h),1,
+N1 3 atoms+floor h=0.3: axiom = D2 ln(eps) >= 0,1,min 0.00331
+N2 3 atoms+floor h=0.3: growth refutes; its absence proves nothing (one-sided),1,D2 rises 0/7 steps -> no verdict on this window
+N1 3 atoms+floor h=1.0: axiom = D2 ln(eps) >= 0,1,min 0.0194
+N2 3 atoms+floor h=1.0: growth refutes; its absence proves nothing (one-sided),1,D2 rises 4/7 steps -> REFUTED
+N3 telescoping: sum of all third differences = D2(right end) - D2(left end),1,0.027781427 = 0.027781427
+"N4 the test is LINEAR in the measured log-errors (no ratio, no plug-in)",1,"coefficients (1,-2,1) at each end; variance exactly 12 sigma^2 for disjoint ends"
+O1 cure: curvature never rises (no elbow),1,0 rises/24
+O1 power-floor: curvature never rises (no elbow),1,0 rises/24
+O1 Lomax: curvature never rises (no elbow),1,0 rises/24
+O1 two-atom: curvature rises then falls (an elbow) -> indivisible,1,10 rises/24
+O2 a bounded spectrum forces an elbow: kappa -> 0 at both ends,1,
+K6 indivisible: floor+one class: and normalised it is the LARGER determinant,0,|det|/prod(diag): offset0 0.008297 vs offset1 0.01459  ratio 0.5688

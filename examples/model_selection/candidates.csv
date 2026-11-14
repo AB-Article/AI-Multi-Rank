@@ -1,0 +1,15 @@
+# THE CANDIDATES: each evaluated ONCE, at its own deployed setting, on the same
+# test set and the same device. Architectures, quantizations and provenance may
+# all differ -- the price comes from the sweep, the score comes from the candidate
+# (F9). Accuracies are COUNTED from items.csv, so the two files cannot disagree.
+# net_g_dominated is in the list on purpose: it is both dearer and less accurate
+# than another candidate, which is the one case a certificate can settle with NO
+# price at all (F18). Real competition leaderboards always contain a few.
+name,accuracy,inference_time_ms,n_test
+net_a_small,0.851000,4.0,50000
+net_d_int8,0.925760,9.0,50000
+net_c_mobile,0.948000,18.0,50000
+net_b@224,0.955320,24.0,50000
+net_e_hybrid,0.960880,40.0,50000
+net_g_dominated,0.943100,30.0,50000
+net_f_large,0.969800,90.0,50000

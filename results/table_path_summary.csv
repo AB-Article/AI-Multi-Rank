@@ -1,0 +1,21 @@
+statistic,value
+frontiers analysed,55.0
+frontiers with span>=1 nat and n>=15,32.0
+fraction with L < pi,1.0
+max L / pi,0.8313571511912675
+median L / pi (fraction of transition traversed),0.31818917776455236
+"corr(L, floor-free prediction)",0.9390023403416319
+median |L - prediction|,0.10999532940018197
+median d ln g / dx,1.1754248566825094
+fraction with d ln g / dx > 0,0.96875
+"sign test p (g constant, i.e. Gamma)",1.5366822481155396e-08
+"median g, lower third",0.9354098970414932
+"median g, upper third",11.33485354785404
+median log-ratio local floor / fitted floor,-0.06242397241544183
+"corr(ln local floor, ln fitted floor)",0.987644925506789
+median error share p at window bottom,0.6420502356275231
+median error share p at window top,0.08510305008085944
+median further log-resource to reach p=0.05 (nats),0.49518181149957385
+median further resource to reach p=0.01 (decades),0.9025211724972406
+median Cauchy-Schwarz bound on remaining log-resource (nats),71.53865542653685
+median observed span (nats),4.683442623380665

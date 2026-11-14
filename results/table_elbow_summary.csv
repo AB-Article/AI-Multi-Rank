@@ -1,0 +1,2 @@
+n_frontiers,elbow_located,floor_identified,new_route_only,median_refutable_share,admissible_share_correlation,median_N_eff_deep,median_N_eff_best,median_band_deep_nats,median_band_nats,band_gt_0094,band_gt_020,median_tightening,band_equals_minus_log_tightening_maxdev
+77,63,44,29,0.5,-0.14809297851327283,0.04925717069599199,1.7238708776542362,0.0011747133719918965,0.7218168922326724,60,57,0.9988259763336659,1.7260616045616213e-16

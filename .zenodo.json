@@ -1,0 +1,44 @@
+{
+  "title": "A Differential Theory of Quality-Resource Trade-offs for AI Model Selection: The Multiresource Frontier and Its Minimax Price - reproducibility archive",
+  "description": "<p>Data, analysis code and results reproducing every number, table and figure in the article, its Online Appendix and its technical report.</p><p>The archive carries 117 published quality-resource frontiers over eight corpus labels &mdash; image classification, distribution shift, neural architecture search, tabular learning, hyperparameter optimisation, materials property prediction and medical imaging &mdash; together with a per-item co-failure panel and language-model factorial grids. The pipeline reads the channel-depth curve off each frontier without fitting it, tests the two structural hypotheses against nulls matched to each frontier's own design, window and residual scale, scores the selection rules in current use against the derived price, and measures the size of the selection decision with no objective function at all.</p><p>162 numbered scripts; 160 of them are driven in order by <code>run_all.sh</code>, and the two that are not rebuild <code>data/</code> from upstream sources. Exactly three scripts can reach the network and none is needed for any published number. Every analytic identity is verified symbolically or at 40 to 50 digits. Five consistency guards check the archive against the article's sources on every release.</p>",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "apache-2.0",
+  "creators": [
+    {
+      "name": "Ignatov, Dmitry",
+      "affiliation": "Computer Vision Lab, CAIDAS & IFI, University of Wuerzburg, Germany"
+    }
+  ],
+  "keywords": [
+    "model selection",
+    "Pareto frontier",
+    "information geometry",
+    "minimax regret",
+    "scaling laws",
+    "complete monotonicity",
+    "infinite divisibility",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22808043",
+      "relation": "isNewVersionOf",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.2139/ssrn.7683960",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/ABrain-One/nn-rank",
+      "relation": "isSupplementedBy",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Code is Apache-2.0. Data compilations are CC BY 4.0 (LICENSE-DATA); the upstream benchmarks remain under their own licences and are credited in the README's data-provenance tables."
+}

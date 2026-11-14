@@ -1,0 +1,16 @@
+result,max_deviation,digits,note
+D1  c_1 = s = b + m_1(nu_x),1.2040215508979484e-23,80,analytic vs central difference of S
+D1  c_2 = kappa = m_2(nu_x),3.5772900025243554e-23,80,Var(a|X>x) is the 2nd moment of the surviving Levy measure
+D1  c_3 = -kappa' = m_3(nu_x),6.428861910654525e-22,80,
+D1  DeltaS = S_inf - S = m_0(nu_x),4.2168791772922093e-81,80,the global budget is the zeroth moment
+C1  N_eff <= DeltaS on every divisible frontier,1.2228949614147407e-79,80,max of N_eff/DeltaS over 10 clocks; = 1 exactly for a single jump size
+C2  sigma >= -1 on every divisible frontier,0.0,80,tight (= -1) exactly on a single-jump clock
+B   sigma == -(1+N_eff) on the two-atom chart,1.349401336733507e-79,80,the indivisible chart saturates the axiom and violates the composition law
+"C3  Kantorovich: N_eff/DeltaS >= 1/(1+W), W=(r-1)^2/4r",0.0,80,"holds on 4 clocks, near-attained on every two-jump clock; W is the knee amplitude"
+C4  N_eff of the normalised price = 1/(1+sigma),7.650290746412409e-68,80,the price curve is a frontier: rung k is 'the k-th price curve is a frontier'
+cure chart lam=3.00 c=1.00: 5 identities,4.2168791772922093e-81,80,L=3.4641016151 vs 2sqrt(lam)=3.4641016151; eps*/eps_inf=2.718281828459 (e=2.718281828459)
+cure chart lam=8.00 c=0.40: 5 identities,8.433758354584419e-81,80,L=5.6568542495 vs 2sqrt(lam)=5.6568542495; eps*/eps_inf=2.718281828459 (e=2.718281828459)
+cure chart lam=1.20 c=2.00: 5 identities,2.1084395886461046e-81,80,L=2.1908902300 vs 2sqrt(lam)=2.1908902300; eps*/eps_inf=2.718281828459 (e=2.718281828459)
+cure chart lam=0.50 c=2.00: 5 identities,2.635549485807631e-82,80,L=1.4142135624 vs 2sqrt(lam)=1.4142135624; no canonical point: S_inf<1 i.e. eps_inf>1/e
+Prop.'kant'  2 sqrt(-ln eps_inf) <= L <= 2 sqrt((1+W)(-ln eps_inf)),0.0,80,left edge exact for the cure chart; first law tying the arc to the floor
+Prop.'ignorance'  E[R] = ln cosh(ln sqrt(lam)) - 1 + 2 atan(sqrt lam)/sqrt lam,5.78714801442912e-24,80,"closed form vs quadrature; minimiser A*=2 atan A*=2.331122370414, lam*=5.4341315058 nats, E[R]_min=0.3221198316 nats"

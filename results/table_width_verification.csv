@@ -1,0 +1,8 @@
+result,max_deviation
+zeta = ln g equals ln(p0/(1-p0))  (two atoms),1.924390591266381e-49
+"d zeta / dx = alpha  (two atoms, every x)",0.0
+eps = 2 eps_inf at zeta = 0  (two atoms),1.3363823550460978e-51
+d zeta / dx = 2 kappa/s - kappa_3/kappa  (any spectrum),5.345529420184391e-51
+cumulant closure kappa_3 = kappa(kappa-s^2)/s  (two atoms),2.6727647100921956e-51
+"Gamma spectrum: d zeta / dx = 0, hence R = 0",1.8669045833583425e-60
+min |R - 1| over >=3-atom spectra (must be > 0),0.10026570697462245

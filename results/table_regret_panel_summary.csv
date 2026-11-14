@@ -1,0 +1,2 @@
+cells_used,cells_total,median_arc_frac,median_obs_frac_in_band,median_pred_frac_in_band,mean_abs_err_frac,spearman_frac,p_wilcoxon_frac,median_obs_mean_R,median_pred_mean_R,spearman_meanR,median_ratio_meanR,p_wilcoxon_meanR,full_arc_mean_R,full_arc_median_R,full_arc_band_frac,sqrt_law_constant
+35,54,0.26343325889918606,0.2,0.22357540928830585,0.09117596802291508,0.8812223513557621,0.8400716444402775,0.22326496904142448,0.22844320956235722,0.919327731092437,1.0985326720970698,0.03873352683149278,0.6931471805599453,0.34657359027997264,0.19964347678228053,0.9003163161571062

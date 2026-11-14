@@ -1,0 +1,15 @@
+# THE CALIBRATION SWEEP: one model (net_b, trained at 320px), FIXED WEIGHTS,
+# evaluated at five input sizes on the same test set and the same device.
+# The sizes are GEOMETRIC (ratio 1.28), because the closed forms for the two
+# walls assume equal steps in log-resource. Input size spans 2.7x, so inference
+# time spans 7.2x, which is the order a selection-grade price needs (F20).
+# All sizes are at or below the training
+# resolution: above it accuracy falls with resource and the points are not Pareto.
+# Generated from the cure chart (lambda=3.93, c=0.492): the canonical price at
+# grain 1 is exactly 0.492 nats per e-fold.
+name,accuracy,inference_time_ms,input_size,n_test
+net_b@112,0.900460,6.00,112,50000
+net_b@143,0.928260,9.78,143,50000
+net_b@184,0.945940,16.19,184,50000
+net_b@235,0.957120,26.42,235,50000
+net_b@301,0.962560,43.34,301,50000

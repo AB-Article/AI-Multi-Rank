@@ -1,0 +1,13 @@
+quantity,value
+archive median fitted floor share -- all frontiers (script 133),0.955562
+archive median fitted floor share -- second-order-readable (script 81),0.991042
+archive median fitted floor share -- chart-test route (script 84),0.98
+archive n -- all frontiers (script 133),117.0
+archive n -- second-order-readable (script 81),92.0
+archive n -- chart-test route (script 84),92.0
+"null share at beta=0.60, script-76 window",0.515278
+"null share at beta=0.15, script-76 window",0.926927
+"null share at beta=0.95, script-76 window",0.096753
+"null share at beta=0.20, script-76 window",0.876107
+"beta reproducing the archive median (0.956) on script-76 window (8 nats, 22 points)",0.103832
+"beta reproducing the archive median (0.956) on archive median design (5.1 nats, 11 points)",0.101255

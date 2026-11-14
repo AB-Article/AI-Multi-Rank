@@ -1,0 +1,6 @@
+stage,fitted_floor,three_point_floor
+single-resource frontiers built,96,96
+carries a usable floor,54,48
+canonical point attainable,26,32
+attainable under BOTH estimators,24,24
+attainable under EITHER estimator,34,34

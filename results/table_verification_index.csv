@@ -1,0 +1,20 @@
+family,file,script,checks,identity_checks,directional_checks,reported_only,worst_residual,residual_column,flagged,note
+amgm,table_amgm_verification.csv,54,13,13,0,0,,,0,no residual column
+budget,table_budget_verification.csv,25,1,1,0,0,5.4299055030071486e-08,max_deviation,0,
+composition,table_composition_identities.csv,96,15,15,0,0,6.428861910654526e-22,max_deviation,0,
+cure,table_cure_identities_archive.csv,99,115,115,0,0,,,0,no residual column
+fixed ratio,fixed_ratio_verification.csv,16,18,18,0,0,1.190764796099586e-05,max_dev_log_ratio,0,
+floor free,table_floor_free_verification.csv,24,6,6,0,0,1.0691058840368783e-38,max_deviation,0,
+generalisation,generalisation_verification.csv,05,20,20,0,0,4.0052294814074685e-09,moment_residual,0,
+horizon,table_horizon_identities.csv,107,107,107,0,21,,,0,no residual column
+invariant,table_invariant_identities.csv,80,9,7,2,0,7.450580596923828e-09,max_deviation,0,
+ladder,table_ladder_identities.csv,88,4,4,0,0,4.814214390755207e-12,max_deviation,0,
+neff,table_neff_identities.csv,89,22,22,0,0,,,0,no residual column
+ode first,table_ode_first_checks.csv,134,159,159,0,0,,,0,no residual column
+pairwise floor,table_pairwise_floor_verification.csv,49,6,6,0,0,0.007242314647,max_abs_error,0,
+path,table_path_verification.csv,34,7,6,1,0,0.0003089309251673,max_deviation,0,
+plane,table_plane_checks.csv,127,137,137,0,0,,,1,no residual column
+surprisal,table_surprisal_verification.csv,30,9,9,0,0,1.504632769052528e-35,max_deviation,0,
+theorem,theorem_verification.csv,02,20,18,2,0,7.965470467510801e-07,abs_error,0,
+tower,table_tower_identities.csv,102,14,14,0,0,,,0,no residual column
+width,table_width_verification.csv,38,7,6,1,0,1.924390591266381e-49,max_deviation,0,

@@ -1,0 +1,23 @@
+block,test,value
+N1 Gamma,Gamma(k=1): N_eff = s^2/kappa at four points,2.220446049250313e-16
+N1 Gamma,Gamma(k=2): N_eff = s^2/kappa at four points,4.440892098500626e-16
+N1 Gamma,Gamma(k=3): N_eff = s^2/kappa at four points,4.440892098500626e-16
+N1 Gamma,Gamma(k=5): N_eff = s^2/kappa at four points,1.7763568394002505e-15
+N1 Gamma,Gamma(k=8): N_eff = s^2/kappa at four points,1.7763568394002505e-15
+N2 regret,max |ln[(1+w)/(2 sqrt w)] - ln cosh(ln w / 2)|,2.220446049250313e-16
+N2 regret,R at one doubling of w (= the covering tolerance),0.058891517828191846
+N2 regret,R is even in ln w: max |R(w) - R(1/w)|,2.220446049250313e-16
+N3 conserved,beta=0.15: max |S w - (1-beta)/beta|  (S* = nats per channel),7.105427357601002e-15
+N3 conserved,beta=0.15: S* = (1-beta)/beta nats,5.666666666666667
+N3 conserved,beta=0.25: max |S w - (1-beta)/beta|  (S* = nats per channel),8.881784197001252e-16
+N3 conserved,beta=0.25: S* = (1-beta)/beta nats,3.0
+N3 conserved,beta=0.5: max |S w - (1-beta)/beta|  (S* = nats per channel),3.3306690738754696e-16
+N3 conserved,beta=0.5: S* = (1-beta)/beta nats,1.0
+N3 conserved,beta=0.9: max |S w - (1-beta)/beta|  (S* = nats per channel),5.551115123125783e-17
+N3 conserved,beta=0.9: S* = (1-beta)/beta nats,0.11111111111111108
+N4 Karamata,edge index theta=0.5: N_eff at x=2e4 (predicted 0.5),0.5001197113348675
+N4 Karamata,edge index theta=1.0: N_eff at x=2e4 (predicted 1.0),1.0000000400000002
+N4 Karamata,edge index theta=2.0: N_eff at x=2e4 (predicted 2.0),2.000000000000001
+N4 Karamata,edge index theta=3.0: N_eff at x=2e4 (predicted 3.0),3.000000000000004
+N4 Karamata,"atom at 0 {0,1}: N_eff at x=1,10,100",8.680177277382049e-44
+N4 Karamata,"gap {0.3,1}: N_eff at x=1,10,100",4.62019347719847e+29

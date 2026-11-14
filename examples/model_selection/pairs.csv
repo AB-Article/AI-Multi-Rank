@@ -1,0 +1,25 @@
+# The pairwise 2x2 tables -- all the certificate ever reads.
+# K(K-1)/2 rows instead of n_test, and the result is identical:
+#   select_model.py candidates.csv --pairs pairs.csv
+i,j,both_fail,i_only,j_only,neither
+net_a_small,net_d_int8,3326,4124,386,42164
+net_a_small,net_c_mobile,2438,5012,162,42388
+net_a_small,net_b@224,2118,5332,116,42434
+net_a_small,net_e_hybrid,1889,5561,67,42483
+net_a_small,net_g_dominated,2676,4774,169,42381
+net_a_small,net_f_large,1463,5987,47,42503
+net_d_int8,net_c_mobile,1973,1739,627,45661
+net_d_int8,net_b@224,1775,1937,459,45829
+net_d_int8,net_e_hybrid,1627,2085,329,45959
+net_d_int8,net_g_dominated,2122,1590,723,45565
+net_d_int8,net_f_large,1318,2394,192,46096
+net_c_mobile,net_b@224,1522,1078,712,46688
+net_c_mobile,net_e_hybrid,1402,1198,554,46846
+net_c_mobile,net_g_dominated,1786,814,1059,46341
+net_c_mobile,net_f_large,1170,1430,340,47060
+net_b@224,net_e_hybrid,1309,925,647,47119
+net_b@224,net_g_dominated,1603,631,1242,46524
+net_b@224,net_f_large,1108,1126,402,47364
+net_e_hybrid,net_g_dominated,1490,466,1355,46689
+net_e_hybrid,net_f_large,1036,920,474,47570
+net_g_dominated,net_f_large,1207,1638,303,46852

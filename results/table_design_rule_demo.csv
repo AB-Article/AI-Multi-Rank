@@ -1,0 +1,3 @@
+curve,n_test,h_used,h_min_price,h_min_neff,widen_by_price,verdict_price,verdict_neff,n_test_min_at_this_h,price_identified_after_the_fact
+calibration.csv,10000,0.6931471805599453,1.8886107892640556,2.670898992221383,2.724689419840644,INFEASIBLE,INFEASIBLE,2204590.911735217,False
+calibration_wide.csv,100000,1.3862943611198906,1.3741631060503186,1.9433601014890984,0.9912491492356846,FEASIBLE,INFEASIBLE,386181.3546688865,True

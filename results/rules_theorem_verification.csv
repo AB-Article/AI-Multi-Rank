@@ -1,0 +1,15 @@
+result,cases,quantity,max_deviation
+P1 elasticity,"20 random (eps_inf,c,alpha), 13 points each",-dS/dx vs alpha p1,5.345529420184391e-51
+P2 curvature,same,d2S/dx2 vs -alpha^2 p1(1-p1),6.01372059770744e-51
+P2 knee,20 instances,argmax|S''| vs canonical zeta=0,5.345529420184391e-51
+P1 half-slope,20 instances,slope at zeta=0 vs alpha/2,4.0091470651382935e-51
+P3 one bit,20 instances,S_inf - S(zeta=0) vs ln 2,9.354676485322685e-51
+P4 last bit,"20 instances x f in {.5,.9,.99}",remaining info vs (1-f) ln 2,8.018294130276587e-51
+P5 regret,20 instances x 4 shares,sup-gap vs 1/2 ln(1/(4q(1-q))),1.052401104598802e-50
+P5 band,r=0.05,R(q_-) vs r,3.4480598415654375e-17
+P6 concavity,"(n,N) in (1,1),(2,2),(2,4),(3,3),(3,5); 5 each",v'Hv vs -Var_p(a.v),2.6727647100921956e-51
+P6 concavity,same,max v'Hv (must be <= 0),-3.212514438852541e-05
+P7 Aitken,"20 instances, geometric spacing",relative error of eps_inf,1.4979786826046477e-14
+P7 three-point,"20 instances, arbitrary spacing",relative error of eps_inf,6.99230415490747e-12
+C1 2x-best,delta*=0.4461,R at eps_best=(1+delta*)eps_inf vs r,3.469446951953614e-17
+C2 half-slope,K*=3.2417,R at share p1(0)/2 vs r,3.469446951953614e-17

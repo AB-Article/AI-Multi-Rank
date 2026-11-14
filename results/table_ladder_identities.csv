@@ -1,0 +1,5 @@
+result,max_deviation
+L1  S^(k) = (-1)^{k+1} c_k (cumulants of the frailty posterior),4.814214390755207e-12
+L2  E[a]E[a^3]-E[a^2]^2 = s^2 kappa^2 [(1-w) - w2]  (identity),1.763308523004703e-49
+"L2  both vanish on {0,alpha}: max |E[a]E[a^3]-E[a^2]^2|",1.7105694144590052e-49
+L4  mirror wall w2 = -rho + w/rho is TIGHT on every two-atom spectrum,1.1479437019748901e-41

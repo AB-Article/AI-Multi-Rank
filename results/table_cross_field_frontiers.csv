@@ -1,0 +1,28 @@
+field,frontier,n,eps_inf,floor_present,median_resid,resources
+vision,ImageNet-1k|lat_rtx3090+param_count,122,0.10370891546331468,True,0.033855295562761345,lat_rtx3090 x param_count
+vision,ImageNet-1k|lat_rtx3090+lat_cpu_i9,45,0.11795211339894399,True,0.047499855210102915,lat_rtx3090 x lat_cpu_i9
+vision,ImageNet-ReaL|lat_rtx3090+param_count,123,0.08802639076043178,True,0.02816139584914934,lat_rtx3090 x param_count
+vision,ImageNet-ReaL|lat_rtx3090+lat_cpu_i9,53,0.09596819541842475,True,0.034332863956561877,lat_rtx3090 x lat_cpu_i9
+vision,ImageNet-V2|lat_rtx3090+param_count,121,0.1730063430993355,True,0.02513749758985484,lat_rtx3090 x param_count
+vision,ImageNet-V2|lat_rtx3090+lat_cpu_i9,42,0.04795744801282617,True,0.03603424681155609,lat_rtx3090 x lat_cpu_i9
+NAS,cifar10|edgegpu+eyeriss,73,0.043110263486502556,True,0.06839399775817823,edgegpu_latency x eyeriss_latency
+NAS,cifar10|raspi4+fpga,68,0.020705315454527123,True,0.02863539907617685,raspi4_latency x fpga_latency
+NAS,cifar10|edgegpu+fpga,75,0.04508359047423855,True,0.06470610775829999,edgegpu_latency x fpga_latency
+NAS,cifar10|pixel3+edgetpu,126,0.00024708562254838483,False,,pixel3_latency x edgetpu_latency
+NAS,cifar100|edgegpu+eyeriss,104,0.2467227967060412,True,0.017585543059381203,edgegpu_latency x eyeriss_latency
+NAS,cifar100|raspi4+fpga,91,0.024962212857016317,True,0.02246641436740293,raspi4_latency x fpga_latency
+NAS,cifar100|edgegpu+fpga,110,0.11371986929498563,True,0.02532072393212831,edgegpu_latency x fpga_latency
+NAS,cifar100|pixel3+edgetpu,87,0.24209964301613518,True,0.011200997535804391,pixel3_latency x edgetpu_latency
+NAS,ImageNet16-120|edgegpu+eyeriss,131,0.4210368705207215,True,0.019628087497731594,edgegpu_latency x eyeriss_latency
+NAS,ImageNet16-120|raspi4+fpga,88,0.04650651050000983,True,0.016731174122541992,raspi4_latency x fpga_latency
+NAS,ImageNet16-120|edgegpu+fpga,140,0.21697490019488408,True,0.022454042662715834,edgegpu_latency x fpga_latency
+NAS,ImageNet16-120|pixel3+edgetpu,153,0.2935322691111039,True,0.01180025120248085,pixel3_latency x edgetpu_latency
+materials,1-F1|params+ntrain,24,0.018335744708505585,True,0.09969949673142908,params x ntrain
+materials,MAE|params+ntrain,22,0.013018010239381095,True,0.0659633501138916,params x ntrain
+tabular,Diabetes130US|train,13,0.6584312839833198,True,0.03692635801859789,time_train_s
+tabular,bank-marketing|train,12,0.4518870969152795,True,0.024539401096296154,time_train_s
+tabular,coil2000_insurance_policies|train,11,0.41186910994113207,True,0.01911799617810972,time_train_s
+tabular,credit_card_clients_default|train,11,0.396914843595843,True,0.023830375234032752,time_train_s
+tabular,customer_satisfaction_in_airline|train,11,0.005473148774647972,True,0.38798086558076594,time_train_s
+tabular,polish_companies_bankruptcy|train,12,0.003509109102738599,True,0.19578861196466085,time_train_s
+tabular,taiwanese_bankruptcy_prediction|train,12,0.10585744232808103,True,0.04515562771963133,time_train_s

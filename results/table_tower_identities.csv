@@ -1,0 +1,15 @@
+block,claim,quantity,value,holds
+dictionary / tower,DeltaS == m_0,max |deviation|,5.345529420184391e-51,1
+dictionary / tower,DeltaS == Neff (1+v),max |deviation|,8.018294130276587e-51,1
+dictionary / tower,w^(1) == 1 + sigma  (recursion),max |deviation|,0.0,1
+log-convexity,"D_k >= 0, k = 0..4",min D_k,-5.345529420184391e-51,1
+log-convexity,c_{k+1}/c_k non-decreasing,min increment,-2.6727647100921956e-51,1
+arc-depth,"phi = 2 sqrt(Neff)/|sigma|, cure chart",|numeric - closed form|,0.0,1
+order theorem,inadmissible clock m = e^x - 1,axiom fails at order / composition fails at order,5.0,1
+order theorem,"  composition order, m = e^x - 1",first violating order,3.0,1
+order theorem,inadmissible clock m = e^(2x) - 1,axiom fails at order / composition fails at order,5.0,1
+order theorem,"  composition order, m = e^(2x) - 1",first violating order,3.0,1
+four-point test,T on cure,T = ln L1 + ln L3 - 2 ln L2,-3.207317652110635e-50,1
+four-point test,T on floor+1ch f=0.15,T = ln L1 + ln L3 - 2 ln L2,-0.11781470341676019,1
+four-point test,T on floor+1ch f=0.40,T = ln L1 + ln L3 - 2 ln L2,-0.10090207466425896,1
+four-point test,T on floor+1ch f=0.02,T = ln L1 + ln L3 - 2 ln L2,-0.015778817595092497,1

@@ -1,0 +1,2 @@
+n_frontiers,median_distinct_picks,median_spread_cost_mult,iqr_lo_spread_cost_mult,iqr_hi_spread_cost_mult,median_spread_logcost,median_spread_bits,frontiers_spread_over_10x,frontiers_under_one_bit,median_mult_per_bit,unitflip_moves
+96,5.0,19.188311685811136,3.7242524302152176,236.14954456987132,2.953382041491479,1.7184120348387377,52,29,11.845271587984765,94

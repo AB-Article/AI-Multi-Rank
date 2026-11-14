@@ -1,0 +1,17 @@
+quantity,value
+frontiers with a usable second-order reading,92.0
+median W = max w over the window,42.37317397570877
+frontiers with W >= 1 (canonical point exists in-window),85.0
+fraction with W >= 1,0.9239130434782609
+implied exponent ratio at the median W (r solving (r-1)^2/4r = W),171.48686455241292
+"median S* (nats per effective channel, invariant route)",4.479554562784186
+"median S* implied by the fitted beta, (1-b)/b",7.2041366411289856
+"K1  Spearman(W, |route gap|)",0.2714332580010206
+K1  p-value,0.010988068035168429
+"K1  median route gap, W < 1 (nats)",1.895628329413057
+"K1  median route gap, W >= 1 (nats)",6.122017763366275
+K1  n with W < 1 / W >= 1,7.0
+K2  eps=2eps_inf route defined,87.0
+K2  eps=2eps_inf route inside the window,37.0
+K2  eps_star route inside the window,12.0
+"K2  |ln N_eff| rule defined (always, by construction)",92.0

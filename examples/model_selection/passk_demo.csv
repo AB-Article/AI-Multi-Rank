@@ -1,0 +1,16 @@
+# A count axis: P(k) = probability an item is still failed after k
+# independent attempts.  On this axis the axiom is a THEOREM of
+# exchangeability and the floor is bracketed by measured numbers.
+k,P
+1,0.18086622
+2,0.06912552
+3,0.03486661
+4,0.02044015
+5,0.01318148
+6,0.00908159
+7,0.00656883
+8,0.00493207
+9,0.00381430
+10,0.00302156
+11,0.00244167
+12,0.00200642

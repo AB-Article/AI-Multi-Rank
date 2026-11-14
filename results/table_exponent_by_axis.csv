@@ -1,0 +1,7 @@
+axis,count,mean,median,std
+infer_gmacs,7,0.298,0.2756,0.0292
+infer_macts,3,0.3755,0.2775,0.1697
+lat_cpu_i9,6,0.4744,0.4744,0.0559
+lat_rtx3090,6,0.2802,0.262,0.0447
+param_count,18,0.5342,0.4595,0.1434
+train_us,1,0.5206,0.5206,

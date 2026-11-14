@@ -1,0 +1,18 @@
+quantity,value
+T2  frontiers with a usable quadruple,117.0
+T2  equally spaced quadruples among them (gap ratio < 1.01),0.0
+T2  median gap ratio max(dx)/min(dx) of the chosen quadruple,3.019624657223283
+T2  fraction with gap ratio > 1.5,0.8717948717948718
+T2  fraction with gap ratio > 3,0.5042735042735043
+"T3/T4  saturating truth, archive nodes: n readable",111.0
+"T3/T4  saturating truth, archive nodes: median exact D_1 (the margin)",0.00026764342899032734
+"T3/T4  saturating truth, archive nodes: D1hat < -1e-9 (false refutation)",0.6486486486486487
+"T3/T4  saturating truth, equal   nodes: n readable",117.0
+"T3/T4  saturating truth, equal   nodes: median exact D_1 (the margin)",0.00031745767568858163
+"T3/T4  saturating truth, equal   nodes: D1hat < -1e-9 (false refutation)",0.0
+"T3/T4  interior   truth, archive nodes: n readable",3183.0
+"T3/T4  interior   truth, archive nodes: median exact D_1 (the margin)",0.22289062687566163
+"T3/T4  interior   truth, archive nodes: D1hat < -1e-9 (false refutation)",0.5359723531259818
+"T3/T4  interior   truth, equal   nodes: n readable",3371.0
+"T3/T4  interior   truth, equal   nodes: median exact D_1 (the margin)",0.22096941937314152
+"T3/T4  interior   truth, equal   nodes: D1hat < -1e-9 (false refutation)",0.0

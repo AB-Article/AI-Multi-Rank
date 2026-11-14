@@ -1,0 +1,36 @@
+check,value,target
+"random pairs, max |margin - identity| (50 dps)",4.2764235e-50,0
+"floor coordinate, max |DeltaJ - closed form|",1.1760165e-49,0
+sign(DeltaJ) == sign(1 - 2 eps_inf/hm) always,True,True
+archived pairs checked,13278,13278
+max |margin - identity| on archived pairs,4.441e-16,0 (machine precision)
+median accuracy gap (nats),0.3425,
+median |1 - 2 sbar/alpha|  (tolerance on alpha),0.3074,paper 0.307
+median |1 - hm/(2 eps_inf)| (tolerance on the floor),0.2351,paper 0.235
+median |1 - alpha/(2 sbar)| (margin/gap),0.3089,"0.3089, not the same stat"
+median |1 - 2 eps_inf/hm|   (floor counterpart),0.2538,0.2538
+median |margin| (nats),0.0927,paper 0.093
+median of gap * |1 - alpha/(2 sbar)|,0.0927,equals the line above
+product of the two medians (NOT the margin),0.1058,medians do not multiply
+fraction of pairs inside the 0.05-nat band,0.3203,paper 0.32
+max |brute force - ln cosh(ln(2 phi -1)/2)|,8.0182941e-51,0
+R(phi = 0.5),inf,panel R_sigma 1.03 (grid-truncated)
+R(phi = 0.7),0.10147,panel R_sigma 0.111
+R(phi = 1.5),0.0588915,panel R_sigma 0.083
+R(phi = 2.0),0.143841,panel R_sigma 0.120
+asymmetry R(0.6)/R(1/0.6),3.37124,"> 1, diverges at 1/2"
+asymmetry R(0.55)/R(1/0.55),4.89192,> previous line
+max |bias - (1-eps_inf) D / (1-h1-h2+h12)|,3.4211388e-49,0
+"min D, scalar (= collinear) resource",-1.3363824e-51,>= 0
+"min D, collinear x1,x2 in 3 resources",-3.3409559e-52,>= 0
+NON-collinear counterexample: D,-0.0777655,< 0 (sign fails)
+  its estimate vs true floor,-0.0870025 vs 0.1,estimator goes negative
+  bias formula still exact there,1.8375257e-51,0
+max |bias| for a single reducible atom,6.9241311e-49,0
+"Gamma spectrum, max |D - closed form|",3.6959325e-51,0
+"max equivariance residual, general spectrum",4.0091471e-51,0
+"fit-free bound D <= min(h1,h2) holds",True,True
+harmonic test: decisions changed by rescaling,0/4000,0 (hm and floor share 1-q0)
+estimator fed corrected rates: disagreements,4000/4000,most: it is not 1-homogeneous
+shared chance mass: est below the raw floor,0/2000,0 (still an upper bound)
+independent guessing: est below the raw floor,1732/2000,many (bound lost)

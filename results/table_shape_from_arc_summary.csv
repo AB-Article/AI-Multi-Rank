@@ -1,0 +1,2 @@
+n_vision_frontiers,n_in_class,spearman_chord_vs_fit,arc_median_rel_err,spearman_zeta_vs_arc,n_path_frontiers,median_beta_arc,median_beta_zeta,median_S_star,median_eps_star,frontiers_L_lt_pi,max_L_over_pi,brackets_knee_local,in_window_floor,in_window_shape
+18,9,0.9500000000000001,0.06678899533603255,0.9303885291396855,55,0.20743457940308552,0.2210863800443541,3.820797009243124,0.021910331196947384,55,0.8715351357497015,27,23,10

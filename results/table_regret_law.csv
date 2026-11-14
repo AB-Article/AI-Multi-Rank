@@ -1,0 +1,16 @@
+statement,numerical,closed_form,rel_err,note
+"1 KL(u||p) = ln(AM/GM) = const - sigma_abar  (max abs dev, 4000 spectra)",3.552713678800501e-15,0.0,3.552713678800501e-15,N=1..5; identity holds to float precision
+"1 convexity of R in x (min second difference, 4000 spectra)",0.0,0.0,,non-negative up to float noise
+"2 e^{-R} = cyclic multi-Bhattacharyya affinity (max rel dev, 2000 draws)",1.0000000000000004,1.0,4.440892098500626e-16,holds at every order N
+3 KL(u||p)+KL(p||u) = zeta (p0 - 1/2)  (max rel dev),1.0,1.0,9.183549615799121e-41,
+4 (1/pi) int_0^pi R dphi  = ln 2,0.6931471805599453,0.6931471805599453,6.429801151679891e-29,mean regret = one bit
+4 median R = R(pi/4)      = (ln 2)/2,0.34657359027997264,0.34657359027997264,2.2958874039497803e-41,mean/median = 2 exactly
+4 int_0^pi e^{-R} dphi    = 2,2.0,2.0,0.0,e^{-R} dphi is the uniform measure on shares
+4 KL(arcsine||uniform)    = ln(4/pi),0.24156447527049044,0.24156447527049044,4.591774807899561e-41,R is the log-density of the Jeffreys prior wrt the uniform prior on shares
+4 E[R] for M=2 modes = psi(M/2)-psi(1/2)-ln M,0.6931471805599453,0.6931471805599453,0.0,= ln 2
+4 E[R] for M=3 modes = psi(M/2)-psi(1/2)-ln M,0.9013877113318903,0.9013877113318903,0.0,
+4 E[R] for M=4 modes = psi(M/2)-psi(1/2)-ln M,1.0,1.0,0.0,= 1 nat exactly
+4 E[R] for M=6 modes = psi(M/2)-psi(1/2)-ln M,1.0945348918918356,1.0945348918918356,0.0,
+4 E[R] for M=11 modes = psi(M/2)-psi(1/2)-ln M,1.1767079018048041,1.1767079018048041,0.0,
+4 lim_{M->inf} E[R] = gamma + ln 2,1.270362845460478,1.2703628454614782,7.871766744225494e-13,universal ceiling 1.27036 nats = 1.83 bits
+5 M_q closed form (max rel dev over 4 alpha x 6 q),1.0,1.0,0.0,q=1/2 is the unique alpha-free member

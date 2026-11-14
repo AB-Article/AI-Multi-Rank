@@ -1,0 +1,7 @@
+result,max_deviation
+alpha_hat = E[a^2]/E[a] (floor-free),1.0691058840368783e-50
+alpha_hat = alpha for one channel,5.345529420184391e-51
+d alpha_hat / dx <= 0 (max value),1.0691058840368783e-38
+Bhatia-Davis k - s(a_max - s) <= 0 (max value),4.0091470651382935e-51
+one channel: s^2 = k at zeta = 0,2.6727647100921956e-51
+one channel: eps k/(s^2+k) = einf,4.0091470651382935e-51

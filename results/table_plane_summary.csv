@@ -1,0 +1,2 @@
+n_frontiers,n_legible,median_line_r2,median_line_r2_wide,straight_at_095,median_sigma,n_floor,fitted_above_epsA,fitted_above_epsW,median_floor_room,elbow_located,median_elbow_frac,curvature_rises,placed_refute,n_placed,unplaced_refute,n_unplaced,median_z_placed,median_z_unplaced,median_sigma_noise,median_price_gap
+117,102,0.22332380462178092,0.03418677284637067,8,-0.09830968853819147,68,89,101,4.745234145604571,115,0.3146143506372074,109,18,78,4,111,-0.40768719360002803,0.1794492951288237,0.050526162069417666,1.1735821615378121

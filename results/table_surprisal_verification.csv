@@ -1,0 +1,10 @@
+result,max_deviation
+ln(eps/eps_inf) = -ln p_0 (surprisal identity),1.8367099231598242e-40
+single channel: eta_i = a_i (1 - p_0),4.591774807899561e-41
+single channel: -S'' = (a.v)^2 p_0 (1 - p_0),6.887662211849341e-41
+"single channel: eps/eps_inf = 1 + e^{-zeta}, zeta = ln(p_0/(1-p_0))",1.88079096131566e-36
+single channel: R = ln cosh(zeta/2) = KL(Bern(1/2)||Bern(p_0)),9.183549615799121e-41
+k/s^2 = alpha_hat/s - 1 = CV^2 (measured spectral width),1.504632769052528e-35
+log-convexity eps(x)^2 - eps(x-h)eps(x+h) <= 0 (max value),0.0
+canonical: -ln p_0 = ln(N+1) at p_0 = 1/(N+1),0.0
+feasibility eps_inf <= p_0 = 1/(N+1) (max violation),0.0

@@ -1,0 +1,7 @@
+quantity,value
+frontiers with a usable second-order reading,92.0
+"observed T, median",5.339815990475817
+"floor share the floor chart must assume to match (free fit, median)",0.98
+frontiers whose free floor fit is pinned at the ceiling p0=0.98,0.5434782608695652
+floor share the paper's own fits report (corpus median),0.51
+nominal one-sided exceedance rate of a correct truth,0.1

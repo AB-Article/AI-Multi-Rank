@@ -1,0 +1,10 @@
+result,max_deviation
+T1  floor+1 channel: w2 = 1 - w,7.450580596923828e-09
+"T1' same, as dw/dS = w(1+w) [relative]",7.65944338513342e-16
+T2  floorless stable: w2 = -2w - 1/S,9.43689570931383e-15
+"T2' same, as dw/dS = -w/S [relative]",1.215694809745888e-14
+T1'' integral of T1 is p_0 = eps_inf/eps,5.551115123125783e-16
+T2'' integral of T2 is w = (1-beta)/(beta S),3.552713678800501e-15
+"gauge: (S, w, w2) invariant under x -> lam x + c",1.1641532182693481e-09
+"gauge: alpha NOT invariant (max change, must be > 0)",4.411673696139496
+T4  kappa'/(s kappa) at w=1 (must be <= 0),2.3592239273284576e-16

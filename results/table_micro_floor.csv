@@ -1,0 +1,13 @@
+family,k_models,allfail_raw,naive_norm,guess_corrected,note
+indep,1,0.1183,0.13144444444444445,0.13144444444444445,eps_inf <= guess_corrected if impossible items are answered at chance independently
+indep,2,0.0966,0.10733333333333334,0.11925925925925926,eps_inf <= guess_corrected if impossible items are answered at chance independently
+indep,3,0.0874,0.09711111111111112,0.11989026063100136,eps_inf <= guess_corrected if impossible items are answered at chance independently
+indep,5,0.0783,0.087,0.13260173754000912,eps_inf <= guess_corrected if impossible items are answered at chance independently
+indep,10,0.0623,0.06922222222222223,0.17867465502636903,eps_inf <= guess_corrected if impossible items are answered at chance independently
+indep,21,0.0342,0.038,0.31256000691885827,eps_inf <= guess_corrected if impossible items are answered at chance independently
+nested,1,0.1173,0.13033333333333333,0.13033333333333333,eps_inf <= guess_corrected if impossible items are answered at chance independently
+nested,2,0.1068,0.11866666666666667,0.13185185185185186,eps_inf <= guess_corrected if impossible items are answered at chance independently
+nested,3,0.1015,0.11277777777777778,0.1392318244170096,eps_inf <= guess_corrected if impossible items are answered at chance independently
+nested,5,0.0945,0.105,0.16003657978966618,eps_inf <= guess_corrected if impossible items are answered at chance independently
+nested,10,0.0791,0.08788888888888889,0.22685658447168205,eps_inf <= guess_corrected if impossible items are answered at chance independently
+nested,21,0.0518,0.057555555555555554,0.47340960112271513,eps_inf <= guess_corrected if impossible items are answered at chance independently

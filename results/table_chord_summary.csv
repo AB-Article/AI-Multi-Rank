@@ -1,0 +1,17 @@
+statistic,value
+frontiers analysed,26.0
+numerics check: median D32/L,0.9999921949347359
+numerics check: max |D32/L - 1|,0.03785487065041926
+"Pearson r(d, L)",0.9811112221888032
+Pearson p,1.2367987540254602e-18
+"Spearman rho(d, L)",0.9779449621472611
+median d/L,0.9791244920242658
+q25 d/L,0.9401289368428696
+q75 d/L,1.0642983447777683
+median bootstrap SE of d,0.09789029046790165
+median bootstrap SE of L,0.09423412142888077
+frontiers with d >= pi,0.0
+median d/pi,0.2658128445037798
+max d/pi,0.4784315221203059
+frontiers with d/L significantly < 0.97,2.0
+frontiers with d/L significantly > 1,3.0

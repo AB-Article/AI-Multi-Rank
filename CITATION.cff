@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: >-
+  If you use this archive, please cite both the article and the archive.
+title: >-
+  A Differential Theory of Quality-Resource Trade-offs for AI Model Selection:
+  The Multiresource Frontier and Its Minimax Price
+abstract: >-
+  Data, analysis code and results reproducing every number, table and figure in
+  the article, its Online Appendix and its technical report. The archive carries
+  117 published quality-resource frontiers over eight corpus labels - image
+  classification, distribution shift, neural architecture search, tabular
+  learning, hyperparameter optimisation, materials property prediction and
+  medical imaging - together with a per-item co-failure panel and language-model
+  factorial grids. The pipeline reads the channel-depth curve off each frontier
+  without fitting it, tests the two structural hypotheses against nulls matched
+  to each frontier's own design, window and residual scale, scores the selection
+  rules in current use against the derived price, and measures the size of the
+  selection decision with no objective function at all. Every analytic identity
+  is verified symbolically or at 40 to 50 digits.
+type: dataset
+authors:
+  - family-names: Ignatov
+    given-names: Dmitry
+    affiliation: >-
+      Computer Vision Lab, CAIDAS & IFI, University of Wuerzburg, Germany
+    email: dmitry.ignatov@uni-wuerzburg.de
+version: 2.0.0
+date-released: '2026-11-14'
+license: Apache-2.0
+license-url: https://opensource.org/licenses/Apache-2.0
+repository-code: https://github.com/AB-Article/differential-theory
+keywords:
+  - model selection
+  - Pareto frontier
+  - information geometry
+  - minimax regret
+  - scaling laws
+  - complete monotonicity
+  - reproducibility
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.0000000
+    description: >-
+      Archived snapshot of this release. Replace with the DOI Zenodo mints for
+      the release before quoting it in the article.
+references:
+  - type: article
+    title: >-
+      A Frontier-Based Theory of Quality-Resource Trade-offs for AI Model
+      Selection
+    authors:
+      - family-names: Ignatov
+        given-names: Dmitry
+    year: 2026
+    doi: 10.2139/ssrn.7683960
+    notes: >-
+      The single-resource predecessor of this work. Its archive is at
+      https://github.com/AB-Article/AI-selection and doi:10.5281/zenodo.22808043.
+preferred-citation:
+  type: article
+  title: >-
+    A Differential Theory of Quality-Resource Trade-offs for AI Model Selection:
+    The Multiresource Frontier and Its Minimax Price
+  authors:
+    - family-names: Ignatov
+      given-names: Dmitry
+      affiliation: >-
+        Computer Vision Lab, CAIDAS & IFI, University of Wuerzburg, Germany
+  year: 2026

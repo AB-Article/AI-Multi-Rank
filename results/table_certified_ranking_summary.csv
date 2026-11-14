@@ -1,0 +1,4 @@
+subset,n_frontiers,median_candidates,median_tiers,median_top_tier,median_share_out_of_contention,median_share_pricefree_dominated,frontiers_with_contradictions
+all,36,31.5,4.0,19.0,0.4382488479262673,0.0,0
+in class,26,36.5,4.0,21.0,0.3591417910447761,0.0,0
+out of class,9,25.0,4.0,13.0,0.5666666666666667,0.0,0

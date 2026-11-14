@@ -1,0 +1,5 @@
+result,max_deviation
+BC = eps(midpoint)/sqrt(eps_1 eps_2),2.220446049250313e-16
+d = L for exactly two atoms,5.928411755886573e-39
+d - L for >=3 atoms (must be <= 0; max value),-8.939546960656253e-05
+L - d for >=3 atoms (strict deficit; min value),8.939546960656253e-05

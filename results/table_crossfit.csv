@@ -1,0 +1,5 @@
+truth,generating_chart,rms_wrong_chart,noise
+two-atom  .03+.5e^-.6x,floor,0.03882282921991022,0.02
+two-atom  .10+.4e^-.4x,floor,0.032595557305159666,0.02
+shape  exp(-(0.5x)^.6),floorless,0.016273224024465616,0.02
+shape  exp(-(1.0x)^.8),floorless,0.020409934728975017,0.02

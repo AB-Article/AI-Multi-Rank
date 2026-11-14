@@ -1,0 +1,129 @@
+section,item,value,target,ok
+1 lattice,cure,2.67276471009e-51,0.0,1
+1 lattice,powerfloor b=-.6,3.20731765211e-50,0.0,1
+1 lattice,stretched b=.4,1.28292706084e-49,0.0,1
+1 lattice,lomax k=3,2.13821176807e-50,0.0,1
+1 lattice,3-jump clock,5.8800823622e-50,0.0,1
+1 lattice,floor+1ch f=.15,6.84227765784e-49,0.0,1
+1 lattice,floor+1ch f=.40,1.36845553157e-48,0.0,1
+1 lattice,floor+1ch f=.02,4.27642353615e-50,0.0,1
+1 lattice,2-exp,4.27642353615e-50,0.0,1
+2 horizons,cure |D_k-h_k'|,2.67276471134e-51,0.0,1
+2 horizons,cure monotone,1.0,1.0,1
+2 horizons,powerfloor b=-.6 |D_k-h_k'|,5.34552942018e-51,0.0,1
+2 horizons,powerfloor b=-.6 monotone,1.0,1.0,1
+2 horizons,stretched b=.4 |D_k-h_k'|,8.01829413028e-51,0.0,1
+2 horizons,stretched b=.4 monotone,1.0,1.0,1
+2 horizons,lomax k=3 |D_k-h_k'|,2.67276471009e-51,0.0,1
+2 horizons,lomax k=3 monotone,1.0,1.0,1
+2 horizons,3-jump clock |D_k-h_k'|,4.00914706514e-51,0.0,1
+2 horizons,3-jump clock monotone,1.0,1.0,1
+2 horizons,floor+1ch f=.15 |D_k-h_k'|,5.34552942018e-51,0.0,1
+2 horizons,floor+1ch f=.15 monotone,0.0,0.0,1
+2 horizons,floor+1ch f=.40 |D_k-h_k'|,1.36845553157e-48,0.0,1
+2 horizons,floor+1ch f=.40 monotone,0.0,0.0,1
+2 horizons,floor+1ch f=.02 |D_k-h_k'|,1.06910588404e-50,0.0,1
+2 horizons,floor+1ch f=.02 monotone,0.0,0.0,1
+2 horizons,2-exp |D_k-h_k'|,4.27642353615e-50,0.0,1
+2 horizons,2-exp monotone,0.0,0.0,1
+3 lengths,cure N_eff=h1/l,0.0,0.0,1
+3 lengths,cure 1+v=h0/h1,0.0,0.0,1
+3 lengths,powerfloor b=-.6 N_eff=h1/l,0.0,0.0,1
+3 lengths,powerfloor b=-.6 1+v=h0/h1,5.34552942018e-51,0.0,1
+3 lengths,3-jump clock N_eff=h1/l,0.0,0.0,1
+3 lengths,3-jump clock 1+v=h0/h1,0.0,0.0,1
+3 lengths,floor+1ch f=.15 N_eff=h1/l,0.0,0.0,1
+3 lengths,floor+1ch f=.15 1+v=h0/h1,1.33638235505e-51,0.0,1
+3 lengths,floor+1ch f=.40 N_eff=h1/l,0.0,0.0,1
+3 lengths,floor+1ch f=.40 1+v=h0/h1,1.33638235505e-51,0.0,1
+3 lengths,floor+1ch f=.02 N_eff=h1/l,0.0,0.0,1
+3 lengths,floor+1ch f=.02 1+v=h0/h1,0.0,0.0,1
+4 similarity,stretched b=.4 h_k,2.67276471009e-51,0.0,1
+4 similarity,stretched b=.4 D_k,6.68191177523e-52,0.0,1
+4 similarity,lomax k=3 h_k,1.33638235505e-51,0.0,1
+4 similarity,lomax k=3 D_k,0.0,0.0,1
+4 similarity,powerfloor b=-.6 h_k,2.67276471009e-51,0.0,1
+4 similarity,powerfloor b=-.6 D_k,6.68191177523e-52,0.0,1
+5 powerfloor,S' completely monotone to order 7,1.0,1.0,1
+5 powerfloor,N_eff/DeltaS - |sigma|,6.68191177523e-52,0.0,1
+6 floorsign,cure D_1,-1.24460305557e-60,,1
+6 floorsign,powerfloor b=-.6 D_1,0.625,,1
+6 floorsign,stretched b=.4 D_1,1.66666666667,,1
+6 floorsign,lomax k=3 D_1,1.0,,1
+6 floorsign,3-jump clock D_1,0.495488666061,,1
+6 floorsign,floor+1ch f=.15 D_1,-0.597262272517,,1
+6 floorsign,floor+1ch f=.40 D_1,-0.158098836843,,1
+6 floorsign,floor+1ch f=.02 D_1,-5.16456200353,,1
+6 floorsign,2-exp D_1,21.239636337,,1
+7 twopoint,cure,1.0,1.0,1
+7 twopoint,powerfloor b=-.6,1.0,1.0,1
+7 twopoint,stretched b=.4,1.0,1.0,1
+7 twopoint,lomax k=3,1.0,1.0,1
+7 twopoint,3-jump clock,1.0,1.0,1
+7 twopoint,floor+1ch f=.15,0.0,0.0,1
+7 twopoint,floor+1ch f=.40,0.0,0.0,1
+7 twopoint,floor+1ch f=.02,0.0,0.0,1
+7 twopoint,2-exp,0.0,0.0,1
+8 linefit,stretched b=.4 slope,1.66666666667,1.66666666667,1
+8 linefit,stretched b=.4 x0,-2.67276471009e-51,0.0,1
+8 linefit,lomax k=3 slope,1.0,1.0,1
+8 linefit,lomax k=3 x0,-0.9,-0.9,1
+8 linefit,powerfloor b=-.6 slope,0.625,0.625,1
+8 linefit,powerfloor b=-.6 x0,-0.7,-0.7,1
+9 genfun,cure,5.00688230155e-42,0.0,1
+9 genfun,powerfloor b=-.6,7.84886127077e-23,0.0,1
+9 genfun,3-jump clock,5.47435529877e-27,0.0,1
+9 genfun,floor+1ch f=.15,5.92610967552e-28,0.0,1
+9 genfun,floor+1ch f=.40,7.13655329002e-29,0.0,1
+9 genfun,floor+1ch f=.02,1.40559228217e-32,0.0,1
+9 radius,stretched b=.4,2.11845229072,,
+9 radius,powerfloor b=-.6,2.56536809793,,
+9 radius,cure,9.84284202822,,
+10 arc,cure,0.0,0.0,1
+10 arc,powerfloor b=-.6,0.0,0.0,1
+10 arc,3-jump clock,0.0,0.0,1
+11 gauge,cure D_k invariant,1.24460305557e-60,0.0,1
+11 gauge,cure N_eff extensive,5.34552942018e-51,0.0,1
+11 gauge,powerfloor b=-.6 D_k invariant,0.0,0.0,1
+11 gauge,powerfloor b=-.6 N_eff extensive,0.0,0.0,1
+11 gauge,stretched b=.4 D_k invariant,0.0,0.0,1
+11 gauge,stretched b=.4 N_eff extensive,0.0,0.0,1
+11 gauge,lomax k=3 D_k invariant,0.0,0.0,1
+11 gauge,lomax k=3 N_eff extensive,5.34552942018e-51,0.0,1
+11 gauge,3-jump clock D_k invariant,0.0,0.0,1
+11 gauge,3-jump clock N_eff extensive,0.0,0.0,1
+11 gauge,floor+1ch f=.15 D_k invariant,0.0,0.0,1
+11 gauge,floor+1ch f=.15 N_eff extensive,1.06910588404e-50,0.0,1
+11 gauge,floor+1ch f=.40 D_k invariant,0.0,0.0,1
+11 gauge,floor+1ch f=.40 N_eff extensive,5.34552942018e-51,0.0,1
+11 gauge,floor+1ch f=.02 D_k invariant,0.0,0.0,1
+11 gauge,floor+1ch f=.02 N_eff extensive,0.0,0.0,1
+11 gauge,2-exp D_k invariant,0.0,0.0,1
+11 gauge,2-exp N_eff extensive,0.0,0.0,1
+12 roots,cure,0.0,,
+12 roots,powerfloor b=-.6,0.0,,
+12 roots,stretched b=.4,0.0,,
+12 roots,lomax k=3,0.0,,
+12 roots,3-jump clock,0.0,,
+12 roots,floor+1ch f=.15,0.0,,
+12 roots,floor+1ch f=.40,0.0,,
+12 roots,floor+1ch f=.02,0.0,,
+12 roots,2-exp,0.0,,
+13 fourpoint,cure min D3S,3.14926074272e-5,,
+13 fourpoint,powerfloor b=-.6 min D3S,9.34005314218e-6,,
+13 fourpoint,stretched b=.4 min D3S,1.05506371672e-5,,
+13 fourpoint,lomax k=3 min D3S,4.66157467848e-5,,
+13 fourpoint,3-jump clock min D3S,1.39368174901e-5,,
+13 fourpoint,floor+1ch f=.15 min D3S,-0.0279249467523,,
+13 fourpoint,floor+1ch f=.40 min D3S,-9.73685527104e-5,,
+13 fourpoint,floor+1ch f=.02 min D3S,-0.379398451863,,
+13 fourpoint,2-exp min D3S,4.44231859863e-6,,
+14 divdiff,cure frac neg,0.0,0.0,1
+14 divdiff,powerfloor b=-.6 frac neg,0.0,0.0,1
+14 divdiff,stretched b=.4 frac neg,0.0,0.0,1
+14 divdiff,lomax k=3 frac neg,0.0,0.0,1
+14 divdiff,3-jump clock frac neg,0.0,0.0,1
+14 divdiff,floor+1ch f=.15 frac neg,0.103333333333,,1
+14 divdiff,floor+1ch f=.40 frac neg,0.0,,1
+14 divdiff,floor+1ch f=.02 frac neg,0.937333333333,,1
+14 divdiff,2-exp frac neg,0.0,,1

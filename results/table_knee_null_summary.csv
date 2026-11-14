@@ -1,0 +1,15 @@
+quantity,value
+frontiers with a design-matched null,92.0
+C1 median plug-in W under the FLOORLESS truth (beta=0.25),12.657186464424544
+C1 median TRUE W of that truth over the same window,3.3761393175119974
+C1 inflation factor of the plug-in maximum (median),2.063615604969444
+C1 median observed W,42.37317397570877
+C1 median observed W / null median (floorless truth),2.652253056336419
+C2 frontiers whose W exceeds the floorless null p90,34.0
+C2 fraction (nominal 0.10 if the floorless truth holds),0.3695652173913043
+C2 median plug-in W under the FLOOR truth (W true = infinity),0.9950016885922259
+"C3 Spearman(raw W, route gap)",0.2714332580010206
+"C3 p-value, raw",0.010988068035168429
+"C3 Spearman(null-calibrated W, route gap)",0.267624116060363
+"C3 p-value, calibrated",0.012209926353852183
+C3 n,87.0

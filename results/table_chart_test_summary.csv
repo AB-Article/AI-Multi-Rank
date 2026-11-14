@@ -1,0 +1,54 @@
+quantity,value
+frontiers with a usable second-order reading,92.0
+"observed T = dzeta/dS, median",5.339815990475817
+"observed T, p10",1.711886842861882
+"observed T, p90",35.50745571432136
+null floor_p0_0.25: median T (pooled) / frac obs inside p10-p90,1.2270149940885084
+null floor_p0_0.25: fraction of frontiers inside p10-p90,0.41304347826086957
+null floor_p0_0.50: median T (pooled) / frac obs inside p10-p90,1.4987902088547176
+null floor_p0_0.50: fraction of frontiers inside p10-p90,0.30434782608695654
+null floor_p0_0.75: median T (pooled) / frac obs inside p10-p90,2.3141519643501693
+null floor_p0_0.75: fraction of frontiers inside p10-p90,0.33695652173913043
+null floor_p0_0.90: median T (pooled) / frac obs inside p10-p90,3.673893672204484
+null floor_p0_0.90: fraction of frontiers inside p10-p90,0.43478260869565216
+null floor_2ch: median T (pooled) / frac obs inside p10-p90,2.423925389245839
+null floor_2ch: fraction of frontiers inside p10-p90,0.17391304347826086
+null stable_beta_0.15: median T (pooled) / frac obs inside p10-p90,7.115197232943455
+null stable_beta_0.15: fraction of frontiers inside p10-p90,0.45714285714285713
+null stable_beta_0.25: median T (pooled) / frac obs inside p10-p90,5.238880794278618
+null stable_beta_0.25: fraction of frontiers inside p10-p90,0.4714285714285714
+null stable_beta_0.35: median T (pooled) / frac obs inside p10-p90,3.6007884250137603
+null stable_beta_0.35: fraction of frontiers inside p10-p90,0.44285714285714284
+null stable_beta_0.50: median T (pooled) / frac obs inside p10-p90,2.607531977475138
+null stable_beta_0.50: fraction of frontiers inside p10-p90,0.32857142857142857
+null stable_beta_0.70: median T (pooled) / frac obs inside p10-p90,1.5781518557376055
+null stable_beta_0.70: fraction of frontiers inside p10-p90,0.352112676056338
+null stable_beta_0.90: median T (pooled) / frac obs inside p10-p90,2.3473471315458156
+null stable_beta_0.90: fraction of frontiers inside p10-p90,0.4675324675324675
+beta_invariant vs beta_chord (arc route): Spearman,0.8875420937728943
+beta_invariant vs beta_chord: n,10.0
+beta_invariant median (same frontiers),0.26090231442686485
+beta_chord median (same frontiers),0.4003684592344685
+beta_invariant vs a per-frontier free-origin fit: Spearman,-0.01346239076052139
+beta_invariant vs beta_fit: n,48.0
+beta_invariant median,0.25
+beta_fit median,0.24919789709989043
+null floor_p0_0.25: median |T_obs - T_null| per frontier,4.352061662844877
+null floor_p0_0.50: median |T_obs - T_null| per frontier,3.6140589741709785
+null floor_p0_0.75: median |T_obs - T_null| per frontier,3.0325193811673756
+null floor_p0_0.90: median |T_obs - T_null| per frontier,2.1394551417736665
+null floor_2ch: median |T_obs - T_null| per frontier,3.4856134116298505
+null stable_beta_0.15: median |T_obs - T_null| per frontier,3.7050354710284124
+null stable_beta_0.25: median |T_obs - T_null| per frontier,3.6749365516861827
+null stable_beta_0.35: median |T_obs - T_null| per frontier,3.8931242872076703
+null stable_beta_0.50: median |T_obs - T_null| per frontier,4.737889880701592
+null stable_beta_0.70: median |T_obs - T_null| per frontier,4.4000591442607835
+null stable_beta_0.90: median |T_obs - T_null| per frontier,5.453173682391123
+frontiers with a floor-chart null at their own fitted p_0,92.0
+fraction with T_obs above that null's p90,0.33695652173913043
+median T_obs / T_null(own p_0),1.267523064258854
+median fitted floor share p_0,0.98
+deep windows (span >= 4 nats of resource): n,64.0
+deep windows: fraction above the own-p_0 null p90,0.296875
+deep windows: median T_obs / T_null(own p_0),1.2837990737219473
+d lnF/dS above the floor-chart null p90 (fraction),0.18478260869565216

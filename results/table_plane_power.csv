@@ -1,0 +1,2 @@
+n_frontiers,B,median_sigma,median_elbow_frac,median_n_admissible,refuted_z_placed,refuted_z_unplaced,refuted_rises,refuted_line_r2,n_z_placed,n_z_unplaced,n_rises,n_line_r2,medpower_z_placed,medpower_z_unplaced,medpower_rises,medpower_line_r2
+117,300,0.051705365488740836,0.3146143506372074,5.0,5,4,0,3,76,111,117,110,0.05333333333333334,0.06333333333333334,0.013333333333333334,0.05342251950947603

@@ -1,0 +1,2 @@
+corpus,tasks,resources,free_params,shared_params,share_explained,frontiers,mape_free,mape_shared,shared_beats_free
+vision,3,3,9,5,0.9825071618448794,9,0.07451154270240747,0.08192225210200281,0.1111111111111111

@@ -1,0 +1,20 @@
+quantity,value
+frontiers with a measured arc,18.0
+median L/pi,0.31416876528347404
+max L/pi,0.5767215674697382
+frontiers with L < pi (exactly two modes certified),18.0
+fraction with L < pi,1.0
+"median lower bound on the number of modes, 1 + L/pi",1.314168765283474
+frontiers whose arc would admit a third mode (L > pi),0.0
+"verification: two atoms -> true N=1, L/pi",1.0000000000000002
+"verification: two atoms, rescaled -> true N=1, L/pi",1.000000000000089
+"verification: three atoms, coincident -> true N=2, L/pi",1.2970235741316047
+"verification: three atoms, spread -> true N=2, L/pi",1.1725370980686924
+"verification: four atoms, coincident -> true N=3, L/pi",1.4927597074455314
+"verification: five atoms, generic -> true N=4, L/pi",1.8309844565635516
+"verification: near-degenerate pair -> true N=2, L/pi",1.0054149730729978
+"verification: 2 atoms, kinks separated -> true N=1, L/pi",1.0000000000000002
+"verification: 3 atoms, kinks separated -> true N=2, L/pi",1.9999510268596516
+"verification: 4 atoms, kinks separated -> true N=3, L/pi",2.9999020537193037
+"verification: 5 atoms, kinks separated -> true N=4, L/pi",3.999853080578954
+"verification: 6 atoms, kinks separated -> true N=5, L/pi",4.999804107438606

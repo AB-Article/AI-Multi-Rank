@@ -1,0 +1,14 @@
+quantity,value
+single-resource frontiers,117.0
+"usable (s>0, kappa>0 on >=5 grid points)",92.0
+median tightening eps_best / F_right,1.040412329681362
+mean tightening,1.3916516657258833
+tightening at the 75th percentile,1.1576042564840532
+max tightening,9.184313829989899
+frontiers where the new bound is tighter,77.0
+median F_right (new bound),0.11533345702833031
+median eps_best (old bound),0.12592945523805785
+median fitted floor (3-parameter law),0.1155061035136693
+fitted floor above the new bound (count),53.0
+F monotone non-increasing across the window (count),5.0
+"median d lnF / dS  (0 = floor chart, see script 82)",0.28445058509222015

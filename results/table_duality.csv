@@ -1,0 +1,24 @@
+block,statement,value,target,ok,note
+selfduality,lim_{x->oo} d/dx[sigma(2x0-x)-sigma(x)],-alpha + 2*lam,2*lam - alpha,True,forces lambda = alpha/2
+selfduality,invariance at lambda=alpha/2 holds iff c =,epsinf*exp(alpha*x0),epsinf*exp(alpha*x0),True,i.e. r(x0) = epsinf
+selfduality,"sigma(2x0-x) - sigma(x) at lambda=alpha/2, r0=epsinf",0,0,True,
+selfduality,r(x) r(2x0-x) - r(x0)^2,0,0,True,
+evenness,J(-zeta) - J(zeta),0,0,True,
+evenness,max |J + ln cosh(zeta/2) + ln(4 einf)/2| at 40 digits,8.2652e-40,0,True,J = const - ln cosh(zeta/2)
+evenness,"argmax J != argmin|zeta|, sd=1.0",0/200000,0,True,
+evenness,"argmax J != nearest in ln(eps), sd=1.0","9925/200000 = 4.96%, worst loss 1.171 nats",draw-dependent,True,not a property of the theory; no figure quoted in the paper
+evenness,"argmax J != argmin|zeta|, sd=2.0",0/200000,0,True,
+evenness,"argmax J != nearest in ln(eps), sd=2.0","19563/200000 = 9.78%, worst loss 2.991 nats",draw-dependent,True,not a property of the theory; no figure quoted in the paper
+psi,R in psi,log(cosh(log(psi)/2)),log(cosh(log(psi)/2)),True,
+psi,R(1/psi) - R(psi),0,0,True,
+psi,R(phi=0.7) - R(phi=1.75),2.0089e-41,0,True,both = 0.10147042 nats
+aitken,solve r_- r_+ = r_0^2 for the floor,(-e_0**2 + e_minus*e_plus)/(-2*e_0 + e_minus + e_plus),Aitken Delta^2,True,
+aitken,40-digit recovery of the floor from a mirror triple,4.8788e-41,0,True,
+mform,"m-rule vs harmonic test, all archived pairs",0 disagreements in 20206,0,True,
+mform,m-rule vs the archived rule_take_accurate column,0 disagreements,0,True,
+mform,pairs on which zeta is undefined but m is not,1854/20206 = 9.2%,reported,True,19 of 54 cells
+mform,"median pair midpoint (m1+m2)/2, 54-cell panel",-0.3992,reported,True,
+mform,"median pair midpoint (m1+m2)/2, 41-cell panel",-0.0015,reported,True,median zeta-midpoint 0.0033
+mirror,cells with the knee inside the observed window,34/41,reported,True,
+mirror,median fraction of candidates whose mirror is in-window,0.85,reported,True,
+mirror,median gap to the nearest measured mirror partner,0.035 nats,reported,True,median point spacing 0.028 nats

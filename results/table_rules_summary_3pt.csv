@@ -1,0 +1,12 @@
+rule,subset,information,applicable,median_regret,n_below_fitted_floor,frac_inband,frac_same_as_canonical,median_abs_dlogcost
+canonical,"attainable, three-point floor",full fit,32,0.0019250154164437107,0,0.9375,1.0,0.0
+two_x_best,"attainable, three-point floor",none,32,0.0043783397472726155,0,0.84375,0.625,0.0
+half_slope,"attainable, three-point floor",none,32,0.0235129001034683,0,0.5625,0.28125,0.2222848519671918
+knee,"attainable, three-point floor",none,32,0.023447009297430398,0,0.5625,0.34375,0.2604157379598384
+three_point,"attainable, three-point floor",3 models,32,0.00901105761707255,0,0.78125,0.28125,0.2748407357104088
+three_point_cheap60,"attainable, three-point floor",3 cheap models,27,0.024504278674814316,0,0.6666666666666666,0.2222222222222222,0.2127448440933113
+accuracy_max,"attainable, three-point floor",none,32,1.3152767158345409,0,0.0625,0.0,3.0892398397604364
+cheapest,"attainable, three-point floor",none,32,0.13069254463263036,0,0.15625,0.03125,0.8003190324859587
+acc_per_cost,"attainable, three-point floor",none,32,0.09545910232824398,0,0.3125,0.125,0.6272121203882611
+ratio_log10,"attainable, three-point floor",none,31,0.10362204301212795,0,0.3548387096774194,0.06451612903225806,0.8460454253532634
+budget_mid,"attainable, three-point floor",a budget,32,0.11721043094091094,0,0.28125,0.03125,1.1538264354442618

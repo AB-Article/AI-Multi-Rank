@@ -1,0 +1,21 @@
+statistic,value
+frontiers analysed,31.0
+median R^2 of the affine fit of zeta on x,0.9172019098640053
+fraction with R^2 >= 0.8,0.7419354838709677
+median slope d zeta / dx (per nat),1.1607843197095913
+fraction with slope > 0,1.0
+median alpha_hat,0.895802013954287
+median fitted alpha (three-parameter),0.879426979752012
+"corr(slope, fitted alpha)",0.5710789978824464
+median slope / fitted alpha,1.2889239905378036
+median R = slope / alpha_hat,1.3659564734148066
+fraction with R > 1,0.7419354838709677
+fraction with R > 1 by more than one bootstrap SE,0.5161290322580645
+median R | N_hat = 1,1.359015787809155
+median R | N_hat >= 2,1.5093450891539528
+AUC  R -> N_hat >= 2,0.5733333333333334
+Mann-Whitney p (R larger when N_hat >= 2),0.30424797054385483
+fraction whose window contains the zero crossing,0.7741935483870968
+half-error floor: n compared,23.0
+half-error floor: median log-ratio to fitted floor,-0.16970341538893044
+half-error floor: corr on logs,0.9533570340075777

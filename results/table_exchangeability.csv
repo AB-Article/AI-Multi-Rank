@@ -1,0 +1,55 @@
+family,test,value
+indep,"E1 all-fail rate, size 2: coeff. of variation across subsets (raw)",0.46624983174098317
+indep,"E1 same, conditioned on the best member",0.043469147573968525
+indep,"E1 all-fail rate, size 3: coeff. of variation across subsets (raw)",0.2841065071688672
+indep,"E1 same, conditioned on the best member",0.03782087896266427
+indep,"E1 all-fail rate, size 4: coeff. of variation across subsets (raw)",0.19363746064149776
+indep,"E1 same, conditioned on the best member",0.038226568958243175
+indep,"E1 all-fail rate, size 6: coeff. of variation across subsets (raw)",0.12567466235431554
+indep,"E1 same, conditioned on the best member",0.03606830757735576
+indep,E2 Hausdorff rms residual of P(1..4),2.4037033579794548e-17
+indep,E2 binomial s.e. at order 4,0.0029394220646271037
+indep,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 4, m=21",1.1428571428571428
+indep,E2 Hausdorff rms residual of P(1..8),0.00011942973204556476
+indep,E2 binomial s.e. at order 8,0.0027748604452415317
+indep,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 8, m=21",5.333333333333333
+indep,E2 Hausdorff rms residual of P(1..12),0.00024140299002524206
+indep,E2 binomial s.e. at order 12,0.002647397568729903
+indep,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 12, m=21",12.571428571428571
+indep,E2 Hausdorff rms residual of P(1..21),0.0008649830773163184
+indep,E2 binomial s.e. at order 21,0.002377788327950737
+indep,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 21, m=21",40.0
+indep,E2 nu({g=1}) from the Hausdorff inversion,0.0
+indep,E2 number of atoms with weight > 1e-6,4.0
+indep,E2 largest atom location g,0.9547738693467337
+indep,"E3 population: min (-1)^3 Delta^3 P, in binomial s.e.",-1.8655732139158927
+indep,E3 per item: fraction with a single transition,0.13684861605071905
+indep,E3 same under a matched exponential link (control),0.043451368486160505
+indep,E3 items tested,6467.0
+nested,"E1 all-fail rate, size 2: coeff. of variation across subsets (raw)",0.48833022592582237
+nested,"E1 same, conditioned on the best member",0.030009241415469942
+nested,"E1 all-fail rate, size 3: coeff. of variation across subsets (raw)",0.3829149238705342
+nested,"E1 same, conditioned on the best member",0.043632380972620434
+nested,"E1 all-fail rate, size 4: coeff. of variation across subsets (raw)",0.2489684371107692
+nested,"E1 same, conditioned on the best member",0.04963869818844858
+nested,"E1 all-fail rate, size 6: coeff. of variation across subsets (raw)",0.16376029063355835
+nested,"E1 same, conditioned on the best member",0.05010120189809272
+nested,E2 Hausdorff rms residual of P(1..4),2.943923360032078e-17
+nested,E2 binomial s.e. at order 4,0.003071799412607508
+nested,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 4, m=21",1.1428571428571428
+nested,E2 Hausdorff rms residual of P(1..8),0.000215682869994533
+nested,E2 binomial s.e. at order 8,0.002962867317699727
+nested,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 8, m=21",5.333333333333333
+nested,E2 Hausdorff rms residual of P(1..12),0.00032504976948198377
+nested,E2 binomial s.e. at order 12,0.002868501065867274
+nested,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 12, m=21",12.571428571428571
+nested,E2 Hausdorff rms residual of P(1..21),0.0006912881530089074
+nested,E2 binomial s.e. at order 21,0.0026695480935911555
+nested,"E2 Diaconis-Freedman bound 2k(k-1)/m at order 21, m=21",40.0
+nested,E2 nu({g=1}) from the Hausdorff inversion,0.0
+nested,E2 number of atoms with weight > 1e-6,3.0
+nested,E2 largest atom location g,0.964824120603015
+nested,"E3 population: min (-1)^3 Delta^3 P, in binomial s.e.",-0.9862159971576115
+nested,E3 per item: fraction with a single transition,0.5538855132715063
+nested,E3 same under a matched exponential link (control),0.046690118324272466
+nested,E3 items tested,6254.0

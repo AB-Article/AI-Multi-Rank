@@ -1,0 +1,79 @@
+law,check,passed,detail
+A,[two-atom floored] s(-inf)=a_max and s(+inf)=a_min,1,
+A,[two-atom floored] kappa vanishes at both ends,1,
+A,[two-atom floored] int kappa dx = a_max - a_min,1,
+A,[two-atom floored] int c_3 dx = 0,1,
+A,[two-atom floored] int c_4 dx = 0,1,
+A,[two-atom no floor] s(-inf)=a_max and s(+inf)=a_min,1,
+A,[two-atom no floor] kappa vanishes at both ends,1,
+A,[two-atom no floor] int kappa dx = a_max - a_min,1,
+A,[two-atom no floor] int c_3 dx = 0,1,
+A,[two-atom no floor] int c_4 dx = 0,1,
+A,[three-atom floored] s(-inf)=a_max and s(+inf)=a_min,1,
+A,[three-atom floored] kappa vanishes at both ends,1,
+A,[three-atom floored] int kappa dx = a_max - a_min,1,
+A,[three-atom floored] int c_3 dx = 0,1,
+A,[three-atom floored] int c_4 dx = 0,1,
+A,[four-atom floored] s(-inf)=a_max and s(+inf)=a_min,1,
+A,[four-atom floored] kappa vanishes at both ends,1,
+A,[four-atom floored] int kappa dx = a_max - a_min,1,
+A,[four-atom floored] int c_3 dx = 0,1,
+A,[four-atom floored] int c_4 dx = 0,1,
+A,[five-atom no floor] s(-inf)=a_max and s(+inf)=a_min,1,
+A,[five-atom no floor] kappa vanishes at both ends,1,
+A,[five-atom no floor] int kappa dx = a_max - a_min,1,
+A,[five-atom no floor] int c_3 dx = 0,1,
+A,[five-atom no floor] int c_4 dx = 0,1,
+B,[two-atom floored] c_3 < 0 near -inf and >= 0 near +inf,1,
+B,[two-atom floored] exactly one sign change (kappa unimodal),1," elbow in (0.75,1.0)"
+B,[two-atom no floor] c_3 < 0 near -inf and >= 0 near +inf,1,
+B,[two-atom no floor] exactly one sign change (kappa unimodal),1," elbow in (0.0,0.25)"
+B,[three-atom floored] c_3 < 0 near -inf and >= 0 near +inf,1,
+B,[three-atom floored] exactly one sign change (kappa unimodal),1," elbow in (-0.25,0.0)"
+B,[four-atom floored] c_3 < 0 near -inf and >= 0 near +inf,1,
+B,[four-atom floored] exactly one sign change (kappa unimodal),1," elbow in (-0.5,-0.25)"
+B,[five-atom no floor] c_3 < 0 near -inf and >= 0 near +inf,1,
+B,[five-atom no floor] exactly one sign change (kappa unimodal),1," elbow in (-0.5,-0.25)"
+B,[3-atom well separated] GENERAL form: c_3 < 0 at the low end and > 0 at the high end,1," c_3(-0.417)=-7.33e-6, c_3(40.0)=4.25e-18"
+B,[3-atom clustered] GENERAL form: c_3 < 0 at the low end and > 0 at the high end,1," c_3(-10.9)=-1.29e-7, c_3(57.1)=4.37e-18"
+B,[cure       S=L(1-e^{-cx})] c_3 >= 0 everywhere (the price is convex),1,
+B,[cure       S=L(1-e^{-cx})] kappa strictly decreasing (no elbow),1,
+B,"[stretched  S=(ax)^b, b=0.5] c_3 >= 0 everywhere (the price is convex)",1,
+B,"[stretched  S=(ax)^b, b=0.5] kappa strictly decreasing (no elbow)",1,
+B,"[power-floor S=L-Cx^b, b=-0.7] c_3 >= 0 everywhere (the price is convex)",1,
+B,"[power-floor S=L-Cx^b, b=-0.7] kappa strictly decreasing (no elbow)",1,
+B,[Lomax      S=k ln(1+x/c)] c_3 >= 0 everywhere (the price is convex),1,
+B,[Lomax      S=k ln(1+x/c)] kappa strictly decreasing (no elbow),1,
+B,120 random finite-atom spectra: every one has c_3 < 0 somewhere,1, exceptions=0
+C,"c_3 >= 0 at every operating point (249 roots, 120 random spectra)",1, violations=0
+C,margin c_3 >= kappa*s*(t-1) holds,1, min slack=-1.97e-31
+C,  alpha=0.4 eps_inf=0.001,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=0.4 eps_inf=0.05,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=0.4 eps_inf=0.3,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=1.3 eps_inf=0.001,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=1.3 eps_inf=0.05,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=1.3 eps_inf=0.3,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=3.0 eps_inf=0.001,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=3.0 eps_inf=0.05,1, span=0.69314618 (ln2=0.69314718)
+C,  alpha=3.0 eps_inf=0.3,1, span=0.69314618 (ln2=0.69314718)
+D,  eps_inf=0.001 alpha=0.4: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,  eps_inf=0.001 alpha=1.3: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,  eps_inf=0.03 alpha=0.4: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,  eps_inf=0.03 alpha=1.3: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,  eps_inf=0.2 alpha=0.4: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,  eps_inf=0.2 alpha=1.3: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,  eps_inf=0.45 alpha=0.4: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,  eps_inf=0.45 alpha=1.3: N_eff=rho-1 and the wall breaks at EVERY x,1,
+D,band -> 0 exactly as the tightening factor -> 1,1,
+D,  [cure L=5] N_eff <= Delta_S everywhere,1, max excess=7.889e-31
+D,  [cure L=1.2] N_eff <= Delta_S everywhere,1, max excess=1.374e-31
+D,  [power-floor L=6] N_eff <= Delta_S everywhere,1, max excess=-0.1337
+E,"[two-atom g=.17/.95] theta in [0,1]",1,
+E,[two-atom g=.17/.95] ln D(t) = -int_0^{ln t} (1-theta) du,1,
+E,[two-atom g=.17/.95] theta -> 1 at BOTH ends (the discount is a transient),1, theta: 0.996 0.552 0.245 0.865 1.0
+E,"[three-class census] theta in [0,1]",1,
+E,[three-class census] ln D(t) = -int_0^{ln t} (1-theta) du,1,
+E,[three-class census] theta -> 1 at BOTH ends (the discount is a transient),1, theta: 0.995 0.496 0.23 0.0501 0.981
+E,"[near-nested g=.999] theta in [0,1]",1,
+E,[near-nested g=.999] ln D(t) = -int_0^{ln t} (1-theta) du,1,
+E,[near-nested g=.999] theta -> 1 at BOTH ends (the discount is a transient),1, theta: 0.991 0.294 0.0172 0.258 0.997

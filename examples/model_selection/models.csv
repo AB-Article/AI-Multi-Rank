@@ -1,0 +1,9 @@
+# Candidate models, each evaluated once on the same test set.
+# Two resources: inference_time (priced from the calibration curve) and param_count (priced by declaration).
+# The accuracies are COUNTED from items_demo.csv, so the two files agree exactly.
+name,accuracy,inference_time,param_count,n_test
+tiny,0.932100,5,4.32,20000
+small,0.968850,12,9.09,20000
+base,0.980850,30,19.81,20000
+large,0.986800,75,43.17,20000
+huge,0.990400,180,90.86,20000

@@ -1,0 +1,16 @@
+quantity,value
+cells (axis x task x frontier),41.0
+axes,6.0
+tasks (evaluation sets),5.0
+eta2 of ln(alpha) by axis,0.631701
+eta2 of ln(alpha) by task,0.652181
+"R2 additive, axis only",0.631701
+"R2 additive, task only",0.652181
+"R2 additive, axis + task",0.975852
+"R2 additive, axis + task, adjusted",0.968841
+increment from task identity (R2 both - R2 axis),0.344151
+increment from axis identity (R2 both - R2 task),0.323671
+parameters in the additive model,10.0
+"borrowed alpha, median rel. error, same axis any task",0.123779
+"borrowed alpha, median rel. error, same axis other tasks",0.240904
+"borrowed alpha within a factor 2, same axis other tasks",0.941176

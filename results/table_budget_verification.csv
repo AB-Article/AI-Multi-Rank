@@ -1,0 +1,2 @@
+result,cases,max_deviation
+"dx_i/dlnC = q_i*/w_i, all theta","30 random (n<=4, theta in 0.3..12)",5.4299055030071486e-08

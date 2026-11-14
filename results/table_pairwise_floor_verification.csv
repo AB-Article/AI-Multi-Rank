@@ -1,0 +1,7 @@
+statement,max_abs_error
+identity (*) recovers the floor,0.0
+equivariance f -> (f+u)/(1+u),0.0
+Cor. 9 decision invariant to chance correction,0.0
+"simulation, M=1000 items",0.007242314647
+"simulation, M=10000 items",0.004647216682
+"simulation, M=100000 items",0.000133652302

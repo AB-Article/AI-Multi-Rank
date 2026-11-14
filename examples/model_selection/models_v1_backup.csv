@@ -1,0 +1,7 @@
+# candidate models, each evaluated once on the same 10000-item test set
+name,accuracy,inference_time,n_test
+tiny,0.8338,5,10000
+small,0.9435,12,10000
+base,0.9734,30,10000
+large,0.9839,75,10000
+huge,0.9883,180,10000

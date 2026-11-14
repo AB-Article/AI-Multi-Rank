@@ -1,0 +1,17 @@
+quantity,status_before,status_after,derived,measured,rel_gap,source
+nesting coefficient kappa,"measured constant, no derivation",price of one attempt; = 1 - q0 at nested knowledge + independent luck,0.9,0.9194374290064528,0.0211405674744576,Prop. kappaq0
+"kappa (other family, bound from below)",measured constant,"lowered below 1-q0 by imperfect nesting, as constructed",0.9,0.7917389241541783,0.13673835218026945,Prop. kappaq0
+count-axis floor nu({g=1}),not a concept,exactly 0 whenever q0 > 0: theorem,0.0,0.0,,Prop. nocountfloor
+m-model floor-bound inflation (indep),measured curiosity,geometric at rate g_max/(1-q0): theorem,1.0555555555555556,1.0442622020457517,0.010814672299427995,Prop. bloat
+m-model floor-bound inflation (nested),measured curiosity,geometric at rate g_max/(1-q0): theorem,1.0733333333333333,1.0666184162385908,0.006295519552739867,Prop. bloat
+regret tolerance rho,hand-set convention (0.05 nats),cost of one doubling of psi: ln cosh(ln2/2),0.0588915178281918,0.05,0.1778303565638359,eq. onedoubling
+covering number K ('five points'),"hand-set, follows from rho",pi/(2 sqrt(2 rho_2)): a consequence of the number two,4.576974632228733,5.0,0.08460507355425335,eq. onedoubling
+band ratio at rho = 0.05,"quoted band [1.53, 2.89]",the factor one doubling corresponds to,1.8921976569360768,1.8888888888888888,0.0017517007308642024,eq. onedoubling
+beta <= 1,imposed to stay inside the class,forced: completely monotone <=> one-sided stable index,,,,Prop. betastable
+beta corpus-specific,reported as a defect,theorem: beta is that corpus's per-skill tail index,0.0119161281571284,0.0,,Prop. betastable
+pi (arc length),unique scale-free curvature moment (dim. analysis),Fisher-Rao diameter of the binary simplex,3.141592653589793,3.141592653589793,0.0,Prop. binary
+E[R] = ln 2,integral of the regret law,log-cosine integral = Jeffreys vs uniform on one bit,0.6931471805599453,0.6931471805599453,0.0,Prop. binary
+Law I on a count axis,axiom (additivity + scale-freeness),theorem of conditional independence alone,,,,Prop. countaxis
+Laws II and III,two laws,"one object, two geometries (Bregman / Fisher-Rao)",,,,Prop. binary
+rank(A) = 1 on 76% of frontiers,"surprising, needed a correction",generic: one difficulty order is one latent coordinate,,,,Sec. count
+eta^2 = 0.52 of ln(alpha) by axis,'nothing transfers',alpha nearly a property of the axis alone (task adds 0.007),,,,Sec. scope

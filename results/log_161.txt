@@ -1,0 +1,46 @@
+  wrote /home/claude/final/Zenodo/results/table_d1hat_spacing.csv  (8 rows)
+  wrote /home/claude/final/Zenodo/results/table_d1hat_archive_nodes.csv  (117 rows)
+  wrote /home/claude/final/Zenodo/results/table_d1hat_spacing_summary.csv  (17 rows)
+==============================================================================
+THE PLUG-IN RUNG D1hat: NODE SPACING, MEASURED
+
+T1  exactness and its loss
+  nodes                     cure D1hat   exact   Gamma(2) D1hat   exact
+  0,h,2h,3h  h=0.01        4.77878e-11   0.000         0.980503   1.000
+  0,h,2h,3h  h=0.1         1.02141e-14   0.000         0.840787   1.000
+  0,h,2h,3h  h=1                     0   0.000         0.422954   1.000
+  0,h,2h,3h  h=3           2.22045e-16   0.000         0.265273   1.000
+  0,1,2,4                     -0.15803   0.000           0.1787   1.000
+  0,1,2,10                   -0.582322   0.000        -0.412884   1.000
+  0,0.5,1,4                  -0.364221   0.000         -0.13172   1.000
+  0,1,3,4                    0.0978453   0.000         0.448676   1.000
+
+==============================================================================
+  T2  frontiers with a usable quadruple                              117.000000
+  T2  equally spaced quadruples among them (gap ratio < 1.01)        0.000000
+  T2  median gap ratio max(dx)/min(dx) of the chosen quadruple       3.019625
+  T2  fraction with gap ratio > 1.5                                  0.871795
+  T2  fraction with gap ratio > 3                                    0.504274
+  T3/T4  saturating truth, archive nodes: n readable                 111.000000
+  T3/T4  saturating truth, archive nodes: median exact D_1 (the margin) 0.000268
+  T3/T4  saturating truth, archive nodes: D1hat < -1e-9 (false refutation) 0.648649
+  T3/T4  saturating truth, equal   nodes: n readable                 117.000000
+  T3/T4  saturating truth, equal   nodes: median exact D_1 (the margin) 0.000317
+  T3/T4  saturating truth, equal   nodes: D1hat < -1e-9 (false refutation) 0.000000
+  T3/T4  interior   truth, archive nodes: n readable                 3183.000000
+  T3/T4  interior   truth, archive nodes: median exact D_1 (the margin) 0.222891
+  T3/T4  interior   truth, archive nodes: D1hat < -1e-9 (false refutation) 0.535972
+  T3/T4  interior   truth, equal   nodes: n readable                 3371.000000
+  T3/T4  interior   truth, equal   nodes: median exact D_1 (the margin) 0.220969
+  T3/T4  interior   truth, equal   nodes: D1hat < -1e-9 (false refutation) 0.000000
+
+  Read T1 first: on the cure chart at EQUAL spacing D1hat is 0 to
+  machine precision for every span, and off equal spacing it is not;
+  on a Gamma(2) truth whose exact D_1 is 1 a span-3 equally spaced
+  quadruple already returns 0.42.  T2 then says the archive has no
+  equally spaced quadruple at all.  T3/T4 separate the two causes:
+  on the SATURATING chart the sign is a coin flip either way, which
+  is the paper's own honest negative; on a STRICTLY INTERIOR truth
+  the rate is 0 on equally spaced nodes and about half on the
+  archive's own, at ZERO noise, so that part of the refutation rate
+  is node geometry and not measurement error at all.

@@ -1,0 +1,4 @@
+quantity,derived,paper_value,note
+rho_one_doubling_nats,0.058891517828191846,0.05,ln cosh(ln2/2): cost of a factor 2 in psi
+covering_number_K,4.576974632228733,5.0,pi/(2 sqrt(2 rho)) at rho = ln cosh(ln2/2)
+psi_factor_at_rho_0.05,1.8921976569360766,1.8888888888888888,"the paper's own band ratio, which fixes the convention"
