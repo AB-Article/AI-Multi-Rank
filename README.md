@@ -2,7 +2,7 @@
 
 **What a Pareto frontier decides before a price is declared**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24219611.svg)](https://doi.org/10.5281/zenodo.24219611)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24235789.svg)](https://doi.org/10.5281/zenodo.24235789)
 [![License: Apache 2.0](https://img.shields.io/badge/code-Apache%202.0-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-blue.svg)](LICENSE-DATA)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
@@ -17,7 +17,7 @@ is produced by the code in this archive from the data in this archive. There are
 no hidden steps, no manual edits to any number, and no network access at
 analysis time.
 
-**Archive DOI:** [`10.5281/zenodo.24219611`](https://doi.org/10.5281/zenodo.24219611).
+**Archive DOI:** [`10.5281/zenodo.24235789`](https://doi.org/10.5281/zenodo.24235789).
 Please cite the archive alongside the article.
 
 ---
@@ -626,7 +626,7 @@ Zenodo mints a DOI from a GitHub *release*, not from a push, and it reads
    the maintained `nn-rank` implementation. Check them on the Zenodo record
    rather than assuming.
 4. Keep the DOI consistent. In this repository it is set in three places, all
-   already carrying `10.5281/zenodo.24219611`: the badge and the "Archive DOI" line in
+   already carrying `10.5281/zenodo.24235789`: the badge and the "Archive DOI" line in
    `README.md`, and `identifiers` in `CITATION.cff`. `grep -rn "zenodo\."
    README.md CITATION.cff` shows all three. Two further places live with the
    manuscript sources rather than here --- the `@string{ignatovZenodoID}` in
